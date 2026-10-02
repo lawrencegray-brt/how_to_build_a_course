@@ -9,34 +9,37 @@ Welcome to **The Course Master Method.** Over five weeks you'll build a real cou
 
 ## What's in the packet
 
-**Your reference**
-- `How_To_Build_A_Course_GUIDE.pdf` — the guide.
-- `Learning_About_Instructional_Design.pdf` — a further-reading list for going deeper on instructional design (backwards design, adult learning, scaffolding, and more).
+Everything below is a link. The packet sits inside the course folder, so a few
+items live one level up — those links point there, and the path is written out
+so you can also just navigate to it.
 
-**Blank templates you fill in** (in `templates/`)
-- `Decisions_TEMPLATE.md` — Week 1 (Guide §1).
-- `Seven_Practices_Audit_TEMPLATE.md` — Week 2 (Guide §3).
-- `MDD_TEMPLATE.md` — Week 2 (Guide §4).
-- `Module_Skeleton_TEMPLATE/` — Week 3 (copy per module; rename to your medium).
-- `Contact_Hour_Companion.pdf` — size each module to its time (Guide §3.5).
+**Your reference**
+- [`How_To_Build_A_Course_GUIDE.pdf`](../../1_Guide/How_To_Build_A_Course_GUIDE.pdf) — the guide. *(in `1_Guide/`)*
+- [`Learning_About_Instructional_Design.pdf`](Learning_About_Instructional_Design.pdf) — a further-reading list for going deeper on instructional design (backwards design, adult learning, scaffolding, and more).
+
+**Blank templates you fill in** — each is a **Word document** you type into; a plain-Markdown copy sits beside it if you prefer.
+- [`Decisions_TEMPLATE.docx`](templates/Decisions_TEMPLATE.docx) — Week 1 (Guide §1).
+- [`Objectives_TEMPLATE.docx`](templates/Objectives_TEMPLATE.docx) — Weeks 1–2 (Guide §2).
+- [`Seven_Practices_Audit_TEMPLATE.docx`](templates/Seven_Practices_Audit_TEMPLATE.docx) — Week 2 (Guide §3).
+- [`Decompose_TEMPLATE.docx`](templates/Decompose_TEMPLATE.docx) — Week 2 (Guide §3.5).
+- [`MDD_TEMPLATE.docx`](templates/MDD_TEMPLATE.docx) — Week 2 (Guide §4).
+- [`Module_Build_TEMPLATE.docx`](templates/Module_Build_TEMPLATE.docx) — Week 3 onward.
+- [`Teaching_Guide_Segment_TEMPLATE.docx`](templates/Teaching_Guide_Segment_TEMPLATE.docx) — Week 5, for your teach-back segment.
+- [`Module_Skeleton_TEMPLATE/`](../../1_Guide/Module_Skeleton_TEMPLATE/) — Week 3; copy it once per module and rename the files to your subject. *(in `1_Guide/`)*
+- [`Contact_Hour_Companion.pdf`](../../1_Guide/Contact_Hour_Companion.pdf) — size each module to its time (Guide §3.5). *(in `1_Guide/`)*
 
 **Student materials (use these during the course)**
-- `study_guides/` — a short pre-class guide for each of the five sessions.
-- `Glossary.md` — every term you'll hear.
-- `cheat_sheets/` — the method on a page, a Bloom-verbs card, a seven-practices card, a "reviewing AI output: two red flags" card, and a **Teaching It Well** card (eight delivery principles for your teach-back).
-- `worksheets/` — Session 1 (fix-these-objectives) and Session 4 (catch-the-AI's-mistakes).
-- `Rubrics.md` — the completion checklists your three deliverables are judged against; self-check before you submit.
-- `Self_Assessment.md` — a "can I do these?" checklist.
+- [`study_guides/`](study_guides/) — a short pre-class guide for each of the five sessions. **Start with [Session 1](study_guides/Session1_PreClass.pdf) — about 20 minutes.**
+- [`Glossary.pdf`](Glossary.pdf) — every term you'll hear.
+- [`cheat_sheets/`](cheat_sheets/) — the method on a page, a Bloom-verbs card, a seven-practices card, a "reviewing AI output: two red flags" card, and a **Teaching It Well** card (eight delivery principles for your teach-back).
+- [`worksheets/`](worksheets/) — Session 1 (fix-these-objectives) and Session 4 (catch-the-AI's-mistakes).
+- [`Rubrics.pdf`](Rubrics.pdf) — the completion checklists your three deliverables are judged against; self-check before you hand anything in.
+- [`Self_Assessment.pdf`](Self_Assessment.pdf) — a "can I do these?" checklist.
 
-**Two filled examples to copy from**
-- `2_Worked_Examples/IntroML/` — a code course (Intro to ML).
-- `2_Worked_Examples/Coffee/` — a non-code course (Home Coffee Brewing).
+**Two filled examples to copy from** *(both in `2_Worked_Examples/`)*
+- [`IntroML/`](../../2_Worked_Examples/IntroML/) — a code course (Intro to ML).
+- [`Coffee/`](../../2_Worked_Examples/Coffee/) — a non-code course (Home Coffee Brewing).
 
 ## Come to Session 1 with
 - The **subject** you want to build a course on.
 - A skim of the guide.
-
----
-
-### Note for the facilitator (not part of the participant hand-out)
-This `Participant_Packet/` folder holds the participant-authored pieces (syllabus + blank templates). For an actual send, **bundle these alongside the shared files** that live one level up: `How_To_Build_A_Course_GUIDE.pdf`, `MDD_TEMPLATE.md`, `Contact_Hour_Companion.pdf`, `Module_Skeleton_TEMPLATE/`, `2_Worked_Examples/IntroML/`, and `2_Worked_Examples/Coffee/`. (They're referenced here rather than duplicated so there's a single source of truth.) You run the sessions from the **Teaching Guide** (`Course_Master_Method_Teaching_Guide`) and the **Pilot MDD** — those are *not* in the participant packet.

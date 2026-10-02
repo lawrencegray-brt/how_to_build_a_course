@@ -1,9 +1,9 @@
 # The Course Master Method — Pilot Syllabus
 
-**Dates:** [TBD — 5 consecutive weeks]
+**Dates:** October 5th to November 2
 **Instructor:** Dr. Lawrence Gray
-**Class Meetings:** [Day], 2 hours on Zoom (5 weekly sessions)
-**Location:** Course materials and submissions on [Canvas / LMS link]
+**Class Meetings:** Monday at 11 AM MDT, 2 hours on Google Meet (5 weekly sessions)
+**Location:** Course materials on Github (https://github.com/lawrencegray-brt/how_to_build_a_course)
 **Office Hours:** By appointment
 
 ---
