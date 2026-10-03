@@ -189,6 +189,9 @@ In each, you could hand the student the condition and watch them perform — whi
 
 **Pick the verb with Bloom's Taxonomy.** The verb declares the level of thinking — match it to what students actually need to do.
 
+**Why this taxonomy, and not just "pick a strong verb."** Thinking comes in levels, and they stack: you can't *evaluate* a model before you can *run* one. Bloom's contribution was to sort the verbs by how much thinking each demands and put them in that order — so the verb you choose isn't decoration, it's a claim about how far up the stack you're asking students to climb. That matters for two practical reasons. **It makes the work visible**: "remember the formula" and "critique someone else's model" are wildly different asks that a vague verb like "learn" hides completely. And **it keeps you honest about difficulty** — if every objective in your course sits on the bottom rung, you've written a course about facts, whichever way it's advertised. You don't need the theory to use it. You need to know that the ladder exists, that higher isn't automatically better, and that the rung you name is the rung you'll have to teach and assess.
+
+
 | Level | What it asks of the student | Sample verbs |
 |---|---|---|
 | Remember | recall facts as given | define, list, name, recall |
@@ -469,6 +472,7 @@ Everything an instructor (often you, months later) needs to get fully prepared w
 - **Deep dives** — background you should *know* but won't directly *teach*. The "know more than you teach" buffer: the next layer down is where student questions live, so you go there in prep even though it never appears in class.
 - **The demo + solution materials** — the fully-worked version of whatever students will practice: the thing done right, completely, by you. Your "notebook" is whatever your students actually run or do — a `.ipynb`, a `.sql` script, a shell session, a spreadsheet, a dialed-in recipe, an annotated model memo. Whichever it is, name the tool, where the inputs live, and how to run one step. (§6a step 2 says what "complete" means in each medium.)
 - **A self-check** — a short quiz/practice so *you* can confirm you understand the module before teaching it. (My rule: pass it yourself first.)
+  *Why this is here, since it's easy to skip as obvious:* **writing a module and being able to teach it are different capabilities**, and the gap between them only shows up live, in front of people. Taking your own self-check is how you find the step you glossed over, the term you used before defining it, and the question you can't actually answer — at your desk, where fixing it costs ten minutes, instead of in the room, where it costs your credibility. It's the portability test applied to yourself: you be the other person who has to teach this from the page alone.
 - **The student quiz and its key** — the self-check instrument students get (step 5a) and the answer key, derived from the complete solution so the two can't disagree. A quiz here is a self-check, never a grade.
 - **A QuickStart kit** — the get-ready-fast materials: a files-by-segment reference, desktop/setup notes, physical materials and stations if your course has them, the pre- and post-class student emails, and a teaching-day checklist (which doubles as your hand-off list).
 
@@ -848,7 +852,8 @@ The blank forms you fill in as you go. (All six are standalone files in `templat
 
 > **Review Council (after a draft exists).** "Act as four cooperative reviewers of the module I give you, each using one lens: **Subject-Matter Expert** (factuality), **Student** (clarity — can I follow this?), **Instructional Designer** (teaching principles and structure), **Professor** (rigor and depth). Add a lens my field needs if one is missing. Rate the module 1–5 on consistency, delivery, factuality and teaching principles, give an overall score, and end with a ship-or-revise verdict and the three specific changes that would most improve it."
 
-**Quality checklists:**
+**Quality checklists.** These three also ship as a **standalone one-page card** — [`Quality_Checklists_Card.pdf`](Quality_Checklists_Card.pdf) — because unlike everything else in this section you'll use them *repeatedly and away from this page*: once per objective, once per module, every module. Print it; don't come back here.
+
 
 *Objectives:*
 
