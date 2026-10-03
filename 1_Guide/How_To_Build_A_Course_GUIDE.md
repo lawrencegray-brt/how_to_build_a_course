@@ -191,6 +191,8 @@ In each, you could hand the student the condition and watch them perform — whi
 
 **Why this taxonomy, and not just "pick a strong verb."** Thinking comes in levels, and they stack: you can't *evaluate* a model before you can *run* one. Bloom's contribution was to sort the verbs by how much thinking each demands and put them in that order — so the verb you choose isn't decoration, it's a claim about how far up the stack you're asking students to climb. That matters for two practical reasons. **It makes the work visible**: "remember the formula" and "critique someone else's model" are wildly different asks that a vague verb like "learn" hides completely. And **it keeps you honest about difficulty** — if every objective in your course sits on the bottom rung, you've written a course about facts, whichever way it's advertised. You don't need the theory to use it. You need to know that the ladder exists, that the rung you name is the rung you'll have to teach and assess, and that choosing it is a design decision rather than a bid for ambition — which is what the next two paragraphs are about.
 
+![The verb you choose names a rung. Aim for the highest the content honestly supports — and no higher.](visuals/bloomladder.png){width=100%}
+
 | Level | What it asks of the student | Sample verbs |
 |---|---|---|
 | Remember | recall facts as given | define, list, name, recall |
