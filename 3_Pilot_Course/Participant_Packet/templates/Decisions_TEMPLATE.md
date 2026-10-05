@@ -6,6 +6,9 @@
 
 ---
 
+- **Values:** Two or three, one line each — your organization's own. **This field is first on purpose:** everything below inherits it, and you map each value to a concrete feature in the MDD (Guide §4). Decide what the course should stand for before you decide who it's for.
+  > …
+
 - **Audience:** Who are they? What do they already know? What are they **not** expected to know?
   > …
 
@@ -24,9 +27,6 @@
   > …
 
 - **Frameworks / tools / materials:** What will students use?
-  > …
-
-- **Values:** Two or three, one line each — your organization's own. (You map each to a concrete feature in the MDD, Guide §4.)
   > …
 
 - **Container:** Session length × number of sessions = contact hours. Any shared stations or equipment?
