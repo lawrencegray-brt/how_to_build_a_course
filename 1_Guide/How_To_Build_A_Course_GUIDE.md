@@ -105,6 +105,14 @@ Two things do the heavy lifting for you:
 
 **Your fastest path.** Write your one-page Decisions doc, then walk Sections 2–6 once for a single module. **Build one module end to end before scaling to the rest** — it templates everything that follows.
 
+**Using AI alongside this guide.** AI does **seven different jobs** here, and only one of them is drafting. Throughout you'll meet callouts marked **AI can help here**, each naming the job it's doing — *tutor, widen, check, simulate, translate, carry,* and finally *produce*. They're collected on one page in the **Directing AI** card.
+
+Two things to notice now, because they explain the shape of everything that follows. **PRODUCE appears only in §6** — AI drafts nothing before then, which is what *decisions before production* actually means in practice. And **TUTOR is available at every step**: you are a subject-matter expert, not an instructional designer, so when a term in this guide is unfamiliar, ask —
+
+> *"I'm a subject-matter expert, not an instructional designer. When I hit a term I don't know — gradual release, altitude, scaffolding, UDL — explain it using my own subject as the example, and tell me which section it matters in."*
+
+One job is deliberately withheld: **estimating how long things take.** That is the question AI is worst at and most confident about. Use the Contact-Hour companion and your own measured pace.
+
 **Words this guide uses.** A few terms, defined where you first meet them rather than in a glossary you'd have to go find:
 
 - **LLM** — a large language model: ChatGPT, Claude, Gemini and the like. When this guide says "the AI," that's what it means.
@@ -168,6 +176,13 @@ Decide and write down:
 
 *Blank form:* [`templates/Decisions_TEMPLATE.docx`](templates/Decisions_TEMPLATE.docx). *Example:* see [`2_Worked_Examples/IntroML/01_Decisions.pdf`](../2_Worked_Examples/IntroML/01_Decisions.pdf) — the entire Decisions doc for an 8-week ML course on one page.
 
+
+> **AI can help here — CARRY.** Once this page is filled, paste it in at the start of every AI session so you never restate the audience, depth or tone.
+>
+> *"This is my Decisions doc. Treat it as fixed context for everything I ask from now on."*
+>
+> **Verify:** when a later draft contradicts this page, the context slipped — re-paste it.
+
 **Why first — and how you'll use it.** This one page becomes the standing context for everything downstream. You'll lean on it when you write objectives (§2) and build the MDD (§4); most of all, when you direct GenAI to produce materials (§6), you hand the Decisions doc to the AI so every draft already knows the audience, depth, and tone — you never re-explain them, and you keep a fixed reference to check the AI's output against. That's what makes ten separately-built modules come out sounding like one course.
 
 With your decisions on one page, the guesswork is gone — next, turn them into objectives: the specific, observable things a student will be able to *do*.
@@ -230,6 +245,24 @@ In both, the module objective is narrower and observable, and it already names i
 
 **Record them in your Objectives doc.** Capture your course objectives — and, once you decompose (§3.5), the module objectives that ladder to them — in the Objectives template. This is **your Objectives doc**: a living artifact you reuse at every step, the same way you reuse the Decisions doc. The seven-practices audit examines it (§3), you decompose it (§3.5), and it feeds the MDD (§4).
 
+> **AI can help here — CHECK.** Once your objectives exist, test them against the four traps — *instructor-focused, activity-not-learning, not measurable, inflated verb.*
+>
+> *"Here are my objectives. For each, say which it falls into — instructor-focused, activity-not-learning, not measurable, inflated verb — or 'none'. Do not rewrite them."*
+>
+> **Verify:** **"Do not rewrite them" is the guardrail.** It diagnoses; you fix. Without it, the AI writes your objectives and the decision has left the room.
+
+> **AI can help here — WIDEN.** Then ask what you left out.
+>
+> *"My audience is [X], my goal is [Y], here are my objectives. What do courses like this usually include that I haven't written? Don't rewrite mine."*
+>
+> **Verify:** input, not instruction — you do **not** have to add any of them. The job is to make sure you are excluding things *on purpose, not by accident.*
+
+> **AI can help here — SIMULATE.** And the one that catches real problems:
+>
+> *"Here is one objective. Write three different things a student might hand in as evidence they met it."*
+>
+> **Verify:** if what comes back isn't what you had in mind, **the objective is ambiguous** — and you found out before anyone was assessed on it.
+
 *Blank form:* [`templates/Objectives_TEMPLATE.docx`](templates/Objectives_TEMPLATE.docx).\
 *Filled examples:* [`2_Worked_Examples/IntroML/02_Objectives.pdf`](../2_Worked_Examples/IntroML/02_Objectives.pdf), [`2_Worked_Examples/Coffee/02_Objectives.pdf`](../2_Worked_Examples/Coffee/02_Objectives.pdf).
 
@@ -250,6 +283,12 @@ And they're **generative, not a grade.** You don't pass or fail — you *answer*
 
 *Filled example:*
 [`2_Worked_Examples/Coffee/03_Seven_Practices_Audit.pdf`](../2_Worked_Examples/Coffee/03_Seven_Practices_Audit.pdf) — the whole audit answered for a real course.
+
+> **AI can help here — WIDEN.** Stuck on a practice? Ask for candidates rather than staring at it.
+>
+> *"I'm answering '[anchor question]' for a course on [X]. Give me five concrete features other courses use. I'll pick or reject."*
+>
+> **Verify:** input, not instruction. A feature you reject is still a decision made on purpose.
 
 **What you do with them — a checklist, not the build.** You're not making anything yet; you're taking inventory of what the course will need. For each practice, answer its anchor question with a *concrete feature*, not a note — "Activate Prior Learning" isn't "remind them of the basics," it's the specific opening hook you'll build. Can't answer one? **That gap is a design task**: something you now know you have to make, and will build later (§6). Run the audit at the **course level** now — you don't have modules yet; those come next (§3.5) — and each module you build later applies the relevant practices again at its own scale (its own hook, its own practice). One row per practice; the features you list flow into the MDD's *Activities* and *Materials* columns (§4), get sorted into modules there, and get built in §6.
 
@@ -356,6 +395,18 @@ Either way you reconcile content against time. The **Contact-Hour companion** ([
 
 ## The steps
 
+> **AI can help here — WIDEN.** Before you cluster, check the module list for holes.
+>
+> *"Here are my course objectives and my module list. What modules would a course like this usually have that I don't? Don't reorganise mine."*
+>
+> **Verify:** each one is either a real gap or a deliberate exclusion you can now name.
+
+> **AI can help here — SIMULATE.** After you sequence, test the order from the student's side.
+>
+> *"You're a student who just finished Module 3. Based only on that, what do you expect Module 4 to teach? What would confuse you if it came next?"*
+>
+> **Verify:** if its expectation doesn't match your Module 4, your order has a seam.
+
 Work Steps 1–2 across **all** your course objectives first; *only then* cluster. Clusters cross CO boundaries — a module often serves several course objectives — so the whole pool of module objectives has to exist before modules can emerge. Record each step as you go on the **Decompose worksheet** ([`templates/Decompose_TEMPLATE.docx`](templates/Decompose_TEMPLATE.docx)) — it has a slot per step and the module list at the end (which becomes your MDD rows).
 
 1. **Name the result + the evidence** (Backward Design stages 1–2). For each course objective, write *how a student will prove it* right next to it — the task, artifact, or performance — and record it in **your Objectives doc** beside the objective (§2). The modules must build toward this evidence.
@@ -434,6 +485,12 @@ The discipline that matters most: **name and itemize the activities.** Not "stud
 
 *Example:*
 [`2_Worked_Examples/IntroML/03_Sample_MDD_Week1.pdf`](../2_Worked_Examples/IntroML/03_Sample_MDD_Week1.pdf)
+
+> **AI can help here — CHECK.** Run the trace-back cold, before you build anything.
+>
+> *"Here are my course objectives and my module list. Name any module that doesn't trace to an objective, and any objective no module serves."*
+>
+> **Verify:** for each flag — scope creep to cut, or an objective you forgot to write? (§3.5's rule.)
 
 > **Key separation:** the MDD says *what* activities happen. The **Teaching Guide** (Section 5) says *how and when* to deliver them — including the minute-by-minute agenda. Don't put delivery timing in the MDD.
 
@@ -569,6 +626,18 @@ This is the level of detail that makes "anyone can teach it" true at the **gold*
 
 That's enough for you to teach from, months later, and it takes minutes to write. The gold tier is what you add when someone *else* has to teach it. **Blank form for the gold tier:**
 [`templates/Teaching_Guide_Segment_TEMPLATE.docx`](templates/Teaching_Guide_Segment_TEMPLATE.docx)
+
+> **AI can help here — WIDEN.** If an activity is still vague, get candidates you can choose between.
+>
+> *"Module objective: [X]. My three rungs are [I do / we do / you do] = [Y]. Give me three concrete named activities for the 'we do' rung — each with what's provided and what the student supplies. Name them; don't write them."*
+>
+> **Verify:** you pick one, or none. *"Students practice"* is not something anyone can build from; a named activity is.
+
+> **AI can help here — CHECK.** And test the thing this section is actually for:
+>
+> *"Read this teaching guide as someone who has never taught this subject. List every place you'd have to improvise."*
+>
+> **Verify:** every "improvise" is a hole. This is the portability bar — *could someone else teach it from the page alone?* — run by something that genuinely hasn't.
 
 **Start from the blank template:** copy `Module_Skeleton_TEMPLATE/` for each module. Its file names are **generic on purpose** — they don't assume what *kind* of course you're building (code, hands-on, writing…), so the one skeleton fits any of them. **Rename each to your course's form** — `complete_solution` becomes `week1_demo.ipynb` for code, or a `recipe_card` for coffee; every stub carries a "code → … · non-code → …" hint. Two filled examples to copy from:
 
@@ -752,6 +821,12 @@ For most workplace domain experts, the goal is usually an **MVP / proof-of-conce
 
 > **Keep asking "why" until you'd be comfortable saying "I don't know" to the class.** Most people stop at a reasonable place. The ones who'd go deeper anyway will — you wouldn't have stopped them.
 
+> **AI can help here — SIMULATE.** The rule above is an interrogation, and AI will ask "why" indefinitely without getting bored or embarrassed.
+>
+> *"I'm teaching [X] to [audience] whose goal is [Y]. Ask me 'why' about my explanation, one question at a time. Don't answer for me."*
+>
+> **Verify:** stop when you'd be comfortable saying *"I don't know"* to the class. It supplies the questions; **the stopping point is your judgment about your audience, and stays yours.**
+
 And a check on your own curiosity: *will going deeper benefit the students, or just satisfy me?* If it's only you, stop. Depth should be **additive** — if questions come in deeper than expected, refine *up* next time. Never go subtractive ("I just went over their heads").
 
 **Where to stop — two examples:**
@@ -769,11 +844,36 @@ A course only works if people can actually *get into* it — and people vary wid
 
 The standard frame is **Universal Design for Learning (UDL)** — offer more than one way through three things:
 
+> **AI can help here — PRODUCE.** Alt-text is the most-skipped item in this section and the most mechanical. Draft it, then read every line against the image.
+>
+> *"Here is my module text and a list of its visuals with what each shows. For each, draft alt-text that conveys what the visual teaches, not just what it depicts."*
+>
+> **Verify:** if the alt-text would let a student answer the question the visual supports, it is right.
+
+> **AI can help here — TRANSLATE.** Captions and transcripts are a reformat, not new content.
+>
+> *"Turn this segment script into captions and this demo into a written transcript. Add nothing that isn't in the source."*
+>
+> **Verify:** nothing new appeared. That is the whole test.
+
 - **Representation** — present content in more than one mode. Don't make a concept reachable only by reading, or only by a diagram. Pair visuals with text; add captions/transcripts to video; write alt-text for images; define jargon (your glossary does this); don't rely on color alone to carry meaning; keep fonts readable and contrast high.
 - **Engagement** — give more than one reason and way to stay in it. Make relevance explicit; offer choices where you can; chunk into manageable pieces; keep structure predictable.
 - **Action & Expression** — let people show what they know in more than one way. A teach-back *or* a written artifact; flexible deadlines where feasible; scaffolding so the path is climbable.
 
 **UDL in one course.** For the home-coffee course: the pour taught three ways — a captioned video, a written recipe card, and a simple diagram (Representation); relevance made explicit, "café coffee for pennies" (Engagement); mastery shown by an on-camera brew *or* a brew-log (Action & Expression). The same three modes hold for an ML module — a runnable notebook, a written walkthrough, and a diagram; a dataset they care about; a teach-back or a submitted notebook.
+
+
+> **AI can help here — CHECK.** Run the one-mode-only audit before you walk the checklist by hand.
+>
+> *"Flag any concept in these materials reachable only one way — only by reading, only by a diagram, only by hearing me say it."*
+>
+> **Verify:** you decide which gaps are worth closing. Not all are.
+
+> **AI can help here — WIDEN.** And ask what you haven't thought of.
+>
+> *"My module is [X] for [audience]. What access barriers should I be thinking about for this kind of material that I probably haven't?"*
+>
+> **Verify:** input, not instruction — you decide which are real for your learners.
 
 **Practical checklist for course builders:**
 
@@ -808,7 +908,19 @@ You don't need a formal study. **Lightweight is enough:**
 
 - **During delivery:** watch where people get stuck and where energy drops — those are live signals.
 - **After each run, hold a short retro:** What confused people? What ran long or short versus your contact-hour estimate (§3.5)? Which questions came up again and again? Repeated questions are missing content or a missing FAQ.
-- **Improve additively** (the depth rule's principle): refine *up* where questions went deeper than expected; don't gut what worked.
+- > **AI can help here — SIMULATE.** Before you have real feedback, run a pre-mortem.
+>
+> *"You took this module and it didn't work for you. You're not hostile, just honest. What went wrong?"*
+>
+> **Verify:** a prompt for what to watch for — never a finding.
+
+> **AI can help here — TRANSLATE.** After the retro, turn notes into changes that land somewhere.
+>
+> *"Here are my notes from the run. Turn them into specific changes, each naming the MDD row or module file it lands in. Don't propose anything my notes don't support."*
+>
+> **Verify:** every change traces to something you actually observed.
+
+**Improve additively** (the depth rule's principle): refine *up* where questions went deeper than expected; don't gut what worked.
 - **Land the changes in the MDD and teaching guide** so the next run starts better than this one did.
 - **Update the feedback envelope** (§6a, 5b) with what students actually submitted. The AI's predicted range was a stand-in; real work is the correction. This is the step that turns one run's surprises into next run's prepared feedback.
 
@@ -821,6 +933,12 @@ That's the method, start to finish. Everything you need to *do* it — the blank
 ---
 
 ## Front it for students: the syllabus
+
+> **AI can help here — TRANSLATE.** The syllabus is a reformat of decisions you already made, so let AI do the reformatting.
+>
+> *"From this Decisions doc and MDD, draft the student-facing syllabus. Every fact must come from one of them."*
+>
+> **Verify:** any fact that isn't already upstream is invented — cut it, or fix the upstream doc.
 
 One artifact your students see that the steps above never told you to build: the **syllabus**. Good news — it isn't new work, it's a *reformat*. Everything in it you've already decided: who it's for and what they'll be able to do (your Decisions doc + objectives), the schedule and how they're assessed (your MDD), and the materials (your modules). So write it **last**, once the pieces exist, and it falls out in an hour. See either worked example's `00_Syllabus` for the shape.
 
