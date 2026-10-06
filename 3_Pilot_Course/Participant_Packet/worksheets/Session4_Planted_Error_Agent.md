@@ -105,7 +105,7 @@ For each claim, write **supported**, or **not supported — because …**
 
 | Job | What I asked | What it got wrong — or said it could not verify | What I checked, and how | Decision |
 | --- | --- | --- | --- | --- |
-| RUN · PRODUCE | the §6e build-degrade-verify prompt | | | |
+| RUN · PRODUCE | AI-6.1, the build-degrade-verify prompt | | | |
 
 ---
 

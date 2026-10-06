@@ -8,6 +8,7 @@ You are working inside a course built with the Course Master method.
 
 Before any task, read the three governing documents at the root of this folder — the **Decisions** document, the **Objectives** document and the **Master Design Document (MDD)** — and treat them as fixed. They are the spec. You propose; the author decides.
 
+- **Work as an expert in this course's subject** — and, when drafting anything a student will see, from the audience's vantage point as the Decisions document describes it. (Guide §6a step 0, made standing.)
 - **Never edit those three files.** If a task seems to require changing one, stop and say so.
 - **Never change the scope, depth, difficulty or tone** of any material. If a task seems to require it, stop and ask.
 - **Never estimate how long an activity will take** a student or an instructor.

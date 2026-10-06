@@ -105,15 +105,15 @@ Two things do the heavy lifting for you:
 
 **Your fastest path.** Write your one-page Decisions doc, then walk Sections 2–6 once for a single module. **Build one module end to end before scaling to the rest** — it templates everything that follows.
 
-**Using AI alongside this guide.** AI does **seven different jobs** here, and only one of them is drafting. Throughout you'll meet callouts marked **AI can help here**, each naming the job it's doing — *tutor, widen, check, simulate, translate, carry,* and finally *produce*. They're collected on one page in the **Directing AI** card.
+**Using AI alongside this guide.** AI does **seven different jobs** here, and only one of them is drafting. Throughout you'll meet callouts marked **AI can help here**, each naming the job it's doing — *tutor, widen, check, simulate, translate, carry,* and finally *produce*. They're collected on one page in the **Directing AI** card. **Every callout carries an id** — **AI-3.1** is the first callout in §3, **AI-6.2** the second agent prompt in §6e — so the Directing AI card, the Teaching Guide and the slides can point at a prompt without quoting it.
 
 Two things to notice now, because they explain the shape of everything that follows. **PRODUCE appears only in §6** — AI drafts nothing before then, which is what *decisions before production* actually means in practice. And **TUTOR is available at every step**: you are a subject-matter expert, not an instructional designer, so when a term in this guide is unfamiliar, ask —
 
-> *"I'm a subject-matter expert, not an instructional designer. When I hit a term I don't know — gradual release, altitude, scaffolding, UDL — explain it using my own subject as the example, and tell me which section it matters in."*
+> **AI-0.1 · TUTOR.** *"I'm a subject-matter expert, not an instructional designer. When I hit a term I don't know — gradual release, altitude, scaffolding, UDL — explain it using my own subject as the example, and tell me which section it matters in."*
 
 One job is deliberately withheld: **estimating how long things take.** That is the question AI is worst at and most confident about. Use the Contact-Hour companion and your own measured pace.
 
-**Some callouts carry a second tag: RUN.** Those are the steps where an AI *agent* — a model given your course folder and the ability to run code and loop on its own — does more than one chat turn can. It reads the Decisions doc, the MDD and the module folder itself instead of what you pasted, and it runs the work, checks the result and fixes it before showing you. RUN never changes *who decides*; it changes how much verification arrives already done. The chat prompt beside every RUN tag still works in any LLM window and is the floor — RUN is the upgrade for readers who have an agent. If you are using one, the paste steps go away; it reads the files. **RUN appears only twice before §6** (the §1 CARRY and the §4 CHECK), and both are read-only. The first agent that *writes* anything is in §6. The agent prompts are collected in **§6e**, and the standing instruction an agent reads from your folder is [`AGENT_INSTRUCTIONS.md`](templates/AGENT_INSTRUCTIONS.md).
+**Some callouts carry a second tag: RUN.** Those are the steps where an AI *agent* — a model given your course folder and the ability to run code and loop on its own — does more than one chat turn can. It reads the Decisions doc, the MDD and the module folder itself instead of what you pasted, and it runs the work, checks the result and fixes it before showing you. RUN never changes *who decides*; it changes how much verification arrives already done. The chat prompt beside every RUN tag still works in any LLM window and is the floor — RUN is the upgrade for readers who have an agent. If you are using one, the paste steps go away; it reads the files. **RUN appears only twice before §6** (**AI-1.1** and **AI-4.1**), and both are read-only. The first agent that *writes* anything is in §6. The agent prompts are collected in **§6e**, and the standing instruction an agent reads from your folder is [`AGENT_INSTRUCTIONS.md`](templates/AGENT_INSTRUCTIONS.md).
 
 **Words this guide uses.** A few terms, defined where you first meet them rather than in a glossary you'd have to go find:
 
@@ -182,13 +182,19 @@ Decide and write down:
 *Blank form:* [`templates/Decisions_TEMPLATE.docx`](templates/Decisions_TEMPLATE.docx). *Example:* see [`2_Worked_Examples/IntroML/01_Decisions.pdf`](../2_Worked_Examples/IntroML/01_Decisions.pdf) — the entire Decisions doc for an 8-week ML course on one page.
 
 
-> **AI can help here — CARRY · RUN.** Once this page is filled, paste it in at the start of every AI session so you never restate the audience, depth or tone.
+> **AI can help here — AI-1.1 · CARRY · RUN.** Once this page is filled, paste it in at the start of every AI session so you never restate the audience, depth or tone.
 >
 > *"This is my Decisions doc. Treat it as fixed context for everything I ask from now on."*
 >
 > **Agentic:** nothing to paste. The agent reads the Decisions doc, the Objectives doc and the MDD from your course folder at the start of every task, because the standing instruction at the folder root tells it to — put [`AGENT_INSTRUCTIONS.md`](templates/AGENT_INSTRUCTIONS.md) there once (renamed for your tool) and the carrying is structural. Context can't slip, because it is never pasted.
 >
 > **Verify:** when a later draft contradicts this page, the context slipped — re-paste it.
+
+> **AI can help here — AI-1.2 · WIDEN.** Before the audience line sets, ask who else is actually coming.
+>
+> *"Here is my Decisions doc. Who else realistically ends up in the room for this course, and what would they need that my audience line doesn't cover?"*
+>
+> **Verify:** you still decide who the course is for. The job is to make sure you are excluding people on purpose, not by accident.
 
 **Why first — and how you'll use it.** This one page becomes the standing context for everything downstream. You'll lean on it when you write objectives (§2) and build the MDD (§4); most of all, when you direct GenAI to produce materials (§6), you hand the Decisions doc to the AI so every draft already knows the audience, depth, and tone — you never re-explain them, and you keep a fixed reference to check the AI's output against. That's what makes ten separately-built modules come out sounding like one course.
 
@@ -252,19 +258,19 @@ In both, the module objective is narrower and observable, and it already names i
 
 **Record them in your Objectives doc.** Capture your course objectives — and, once you decompose (§3.5), the module objectives that ladder to them — in the Objectives template. This is **your Objectives doc**: a living artifact you reuse at every step, the same way you reuse the Decisions doc. The seven-practices audit examines it (§3), you decompose it (§3.5), and it feeds the MDD (§4).
 
-> **AI can help here — CHECK.** Once your objectives exist, test them against the four traps — *instructor-focused, activity-not-learning, not measurable, inflated verb.*
+> **AI can help here — AI-2.1 · CHECK.** Once your objectives exist, test them against the four traps — *instructor-focused, activity-not-learning, not measurable, inflated verb.*
 >
 > *"Here are my objectives. For each, say which it falls into — instructor-focused, activity-not-learning, not measurable, inflated verb — or 'none'. Do not rewrite them."*
 >
 > **Verify:** **"Do not rewrite them" is the guardrail.** It diagnoses; you fix. Without it, the AI writes your objectives and the decision has left the room.
 
-> **AI can help here — WIDEN.** Then ask what you left out.
+> **AI can help here — AI-2.2 · WIDEN.** Then ask what you left out — in the unit this section works in, which is objectives, not topics.
 >
-> *"My audience is [X], my goal is [Y], here are my objectives. What do courses like this usually include that I haven't written? Don't rewrite mine."*
+> *"Here is my Decisions doc and my objectives. For this audience, goal and depth, what would a student in a course like this usually be able to **do** by the end that none of mine names? Give each as a measurable objective at the altitude my depth rule allows — no 'understand' or 'know'. Don't rewrite mine."*
 >
-> **Verify:** input, not instruction — you do **not** have to add any of them. The job is to make sure you are excluding things *on purpose, not by accident.*
+> **Verify:** input, not instruction — you do **not** have to add any of them. The job is to make sure you are excluding things *on purpose, not by accident* — and anything that comes back as a topic rather than something a student does is not an objective yet.
 
-> **AI can help here — SIMULATE.** And the one that catches real problems:
+> **AI can help here — AI-2.3 · SIMULATE.** And the one that catches real problems:
 >
 > *"Here is one objective. Write three different things a student might hand in as evidence they met it."*
 >
@@ -291,11 +297,11 @@ And they're **generative, not a grade.** You don't pass or fail — you *answer*
 *Filled example:*
 [`2_Worked_Examples/Coffee/03_Seven_Practices_Audit.pdf`](../2_Worked_Examples/Coffee/03_Seven_Practices_Audit.pdf) — the whole audit answered for a real course.
 
-> **AI can help here — WIDEN.** Stuck on a practice? Ask for candidates rather than staring at it.
+> **AI can help here — AI-3.1 · WIDEN.** Stuck on a practice? Ask for candidates — but the practice examines *your* objectives and decisions, so those are the input, not your topic.
 >
-> *"I'm answering '[anchor question]' for a course on [X]. Give me five concrete features other courses use. I'll pick or reject."*
+> *"Here are my Decisions doc and my course objectives. I'm auditing them against the practice '[anchor question]'. Name the features my course is missing that would answer it — concrete activities, materials or pieces of content, each tied to the objective it serves and fitting the audience and depth in my decisions. Five at most. I'll pick or reject."*
 >
-> **Verify:** input, not instruction. A feature you reject is still a decision made on purpose.
+> **Verify:** each candidate names the objective it serves; anything that doesn't fit your Decisions doc is out before you weigh it. Input, not instruction — a feature you reject is still a decision made on purpose.
 
 **What you do with them — a checklist, not the build.** You're not making anything yet; you're taking inventory of what the course will need. For each practice, answer its anchor question with a *concrete feature*, not a note — "Activate Prior Learning" isn't "remind them of the basics," it's the specific opening hook you'll build. Can't answer one? **That gap is a design task**: something you now know you have to make, and will build later (§6). Run the audit at the **course level** now — you don't have modules yet; those come next (§3.5) — and each module you build later applies the relevant practices again at its own scale (its own hook, its own practice). One row per practice; the features you list flow into the MDD's *Activities* and *Materials* columns (§4), get sorted into modules there, and get built in §6.
 
@@ -318,7 +324,7 @@ And they're **generative, not a grade.** You don't pass or fail — you *answer*
 
 And the audit earns its keep: the coffee author had **no good answer for *Develop Mastery*** until the audit forced one — adding an **instructor reference brew** as the benchmark students taste and aim at. That gap *was* the next design task. (For a full technical version, see how these are answered for Intro-ML in its sample MDD, `03_Sample_MDD_Week1.md`.)
 
-**Put an LLM to work — after your own pass, not before.** Do the audit yourself first; your answers carry what only *you* hold — your audience, your subject. *Then* hand your draft to an LLM for the two jobs it's good at: **fill** the blanks (*"here are the practices I couldn't answer — give me five candidate features for each"*) and **widen** (*"what would strong courses on this include that I've missed?"*). It over-produces and skews generic, so keep only what rings true for *your* people and rewrite it in your voice — the same guardrail as everywhere else (§6). Lead with the AI instead and you'll anchor on its generic ideas and never surface the audience truth that makes a feature land.
+**Put an LLM to work — after your own pass, not before.** Do the audit yourself first; your answers carry what only *you* hold — your audience, your subject. *Then* hand your draft to an LLM for the two jobs it's good at: **fill** the blanks (**AI-3.1** — your Decisions doc and objectives in, features that serve *those* objectives out) and **widen** (*"given these objectives and this audience, what am I still missing?"*). It over-produces and skews generic, so keep only what rings true for *your* people and rewrite it in your voice — the same guardrail as everywhere else (§6). Lead with the AI instead and you'll anchor on its generic ideas and never surface the audience truth that makes a feature land.
 
 > The anchor question above is the one to lead with. **The full question bank is in Appendix B** — pull more prompts when a section feels thin.
 
@@ -402,13 +408,13 @@ Either way you reconcile content against time. The **Contact-Hour companion** ([
 
 ## The steps
 
-> **AI can help here — WIDEN.** Before you cluster, check the module list for holes.
+> **AI can help here — AI-3.5.1 · WIDEN.** Before you cluster, check the module list for holes.
 >
 > *"Here are my course objectives and my module list. What modules would a course like this usually have that I don't? Don't reorganise mine."*
 >
 > **Verify:** each one is either a real gap or a deliberate exclusion you can now name.
 
-> **AI can help here — SIMULATE.** After you sequence, test the order from the student's side.
+> **AI can help here — AI-3.5.2 · SIMULATE.** After you sequence, test the order from the student's side.
 >
 > *"You're a student who just finished Module 3. Based only on that, what do you expect Module 4 to teach? What would confuse you if it came next?"*
 >
@@ -493,7 +499,7 @@ The discipline that matters most: **name and itemize the activities.** Not "stud
 *Example:*
 [`2_Worked_Examples/IntroML/03_Sample_MDD_Week1.pdf`](../2_Worked_Examples/IntroML/03_Sample_MDD_Week1.pdf)
 
-> **AI can help here — CHECK · RUN.** Run the trace-back cold, before you build anything.
+> **AI can help here — AI-4.1 · CHECK · RUN.** Run the trace-back cold, before you build anything.
 >
 > *"Here are my course objectives and my module list. Name any module that doesn't trace to an objective, and any objective no module serves."*
 >
@@ -636,17 +642,23 @@ This is the level of detail that makes "anyone can teach it" true at the **gold*
 That's enough for you to teach from, months later, and it takes minutes to write. The gold tier is what you add when someone *else* has to teach it. **Blank form for the gold tier:**
 [`templates/Teaching_Guide_Segment_TEMPLATE.docx`](templates/Teaching_Guide_Segment_TEMPLATE.docx)
 
-> **AI can help here — WIDEN.** If an activity is still vague, get candidates you can choose between.
+> **AI can help here — AI-5.1 · WIDEN.** If an activity is still vague, get candidates you can choose between.
 >
-> *"Module objective: [X]. My three rungs are [I do / we do / you do] = [Y]. Give me three concrete named activities for the 'we do' rung — each with what's provided and what the student supplies. Name them; don't write them."*
+> *"Here is my Decisions doc. Module objective: [X]. My three rungs are [I do / we do / you do] = [Y]. Give me three concrete named activities for the 'we do' rung that fit this audience and depth — each with what's provided and what the student supplies, blanking decisions rather than syntax. Name them; don't write them."*
 >
 > **Verify:** you pick one, or none. *"Students practice"* is not something anyone can build from; a named activity is.
 
-> **AI can help here — CHECK.** And test the thing this section is actually for:
+> **AI can help here — AI-5.2 · CHECK.** And test the thing this section is actually for:
 >
 > *"Read this teaching guide as someone who has never taught this subject. List every place you'd have to improvise."*
 >
 > **Verify:** every "improvise" is a hole. This is the portability bar — *could someone else teach it from the page alone?* — run by something that genuinely hasn't.
+
+> **AI can help here — AI-5.3 · SIMULATE.** Find the rung you skipped — before a student does.
+>
+> *"Here's my complete version and my practice version. You're a student who has only seen the complete one. Attempt the practice. Where do you not know what to do?"*
+>
+> **Verify:** every place it stalls is a missing hint or a rung you skipped. It is simulating a student, so a stall is a question about your scaffolding, not a verdict on it.
 
 **Start from the blank template:** copy `Module_Skeleton_TEMPLATE/` for each module. Its file names are **generic on purpose** — they don't assume what *kind* of course you're building (code, hands-on, writing…), so the one skeleton fits any of them. **Rename each to your course's form** — `complete_solution` becomes `week1_demo.ipynb` for code, or a `recipe_card` for coffee; every stub carries a "code → … · non-code → …" hint. Two filled examples to copy from:
 
@@ -685,7 +697,7 @@ Now produce. Treat GenAI as a fast junior author who has read your Decisions doc
     ![What "complete" is in each medium — three equal answers, not one real one and two substitutes.](visuals/completesolution.png){width=95%}
 3. Create the scaffolded student versions by *removing* support from that complete solution — for a code course, blanking parameters and leaving `TODO`s; for other media, removing steps from a worked template. Because the practice version is *derived* from one that works, it's guaranteed correct.
 
-    **RUN — build, degrade and verify as one loop.** With an agent, steps 2, 3 and 6 run as a single pass: it builds the complete solution, runs it top to bottom on the shipped data, records the expected output beside each step, derives the fill-in and TODO versions, runs those against the solution, and stops when everything executes — reporting what it could not verify. Prompt in **§6e**. *You still decide which blanks are the right decisions to blank and whether the hints point without answering; and for a hands-on or judgment module nothing executes, so "verify" is still you doing the thing.*
+    **RUN — build, degrade and verify as one loop.** With an agent, steps 2, 3 and 6 run as a single pass: it builds the complete solution, runs it top to bottom on the shipped data, records the expected output beside each step, derives the fill-in and TODO versions, runs those against the solution, and stops when everything executes — reporting what it could not verify. Prompt **AI-6.1** (§6e). *You still decide which blanks are the right decisions to blank and whether the hints point without answering; and for a hands-on or judgment module nothing executes, so "verify" is still you doing the thing.*
 4. Ground all prose (scripts, cheat sheets, guides) in the real artifacts — the notebook is the source of truth, the guide describes it.
 5. **Generate the assessments — two cases, depending on whether the answer converges.**
     - **5a — convergent (one right answer):** generate the quizzes and practice sets. Step 2 already built the single correct solution, so the answer key is derivable from it (a quiz item, a coding exercise).
@@ -699,14 +711,14 @@ Now produce. Treat GenAI as a fast junior author who has read your Decisions doc
           the student-facing half is a checklist in `guided_practice/`.
         - **When the AI's range is weak** — and for judgment-, context- or opinion-heavy work it will be (see the limitations note below) — the axes still come from your exemplar. Write the bands yourself and let the AI only stress-test them.
         - *Worked example:* the IntroML example's `05_Bounding_The_Answer_Space` file walks one real assignment end to end — the axes, the prompt, the collected range, the envelope and the bank.
-        - **RUN:** fan step 2 out as eight to ten *independent* agent runs with no shared context, then a separate pass sorts the results against your axes. Independence is what keeps ten runs from collapsing into one voice. The envelope arrives filled; you check the bands, and the bank stays yours. Prompt in **§6e**.
+        - **RUN:** fan step 2 out as eight to ten *independent* agent runs with no shared context, then a separate pass sorts the results against your axes. Independence is what keeps ten runs from collapsing into one voice. The envelope arrives filled; you check the bands, and the bank stays yours. Prompt **AI-6.2** (§6e).
 
         You're using the AI as a rough *simulator of the student population* to chart the answer space — never to judge a student's work. **It's a feedback envelope, not a grading one:** it tells you what to say, not what to score.
 
         ![A feedback envelope, filled: your axes down the side, the three bands across, and a real example in every cell.](visuals/feedbackenvelope.png){width=95%}
 6. **Verify everything** — run it, check that hints guide without giving answers, and **budget the time for keeps.** The materials now exist, so run the **Contact-Hour companion** again with the **real** minutes and sum them across pre-class, live, practice and post-class. §3.5 sized the module with ballpark numbers; this is where the number becomes true. If a package pushes the module past its container, fix it *here* — trim depth, cut a piece, or move work to pre-/post-class — before you script or build anything further. **RUN:** if an agent ran steps 2–6 as a loop it has already proved the code executes — so verify everything it *could not*: hint quality, tone, and the time budget. Its own report is never the verification.
 7. **Write the teaching guide — now the materials exist.** With the module built and verified, you can finally script what to *say* about it. §5 gave you the spec and the agenda; here you write the **verbatim segment scripts** that narrate the produced materials (the notebook, the practice, the demo). This is why the teaching guide comes near-last — it describes things that didn't exist until step 6. *(Use the §5 anatomy + [`templates/Teaching_Guide_Segment_TEMPLATE.docx`](templates/Teaching_Guide_Segment_TEMPLATE.docx); AI drafts from the real artifacts, you verify and keep your voice.)*
-8. **Turn the module into delivery media.** Once a module is finished, verified, *and scripted*, **derive** the slide deck from it — don't write a new one. This is the same move as step 3 (*derive by removing*) and step 4 (*ground prose in the artifacts*): the verified module is the source of truth, the deck is downstream of it. A **beat** is one timed sub-block of the segment script — so "one slide per beat" means the deck tracks what you actually say, in order. *(Blank form: `Module_Skeleton_TEMPLATE/Teaching_Guide/deck_outline.md`.)* And "deck" means whatever your room shows: slides, printed boards, cards at the station — derived the same way. The teaching guide's verbatim segment script (from step 7) **is** the narration; the deck just visualizes it, beat by beat. Point the AI at the segment transcript and the notebook/worked example and ask for a deck that **mirrors** them — one slide per beat, figures and code lifted from the real artifacts, speaker notes pulled from the script. The hard rule: **the deck visualizes; it never invents.** If a slide wants a fact, an example, or a number that isn't already in the verified module, that's a red flag — either it's wrong, or the module is missing something and you fix it *upstream* first, then let the deck inherit the correction. Build slides *first* and they become the de facto curriculum you never checked; build the module, verify it, *then* let the deck inherit its correctness. Same Command Rule as everywhere else: AI drafts the deck, **you** verify every slide against the source and keep your voice. **RUN:** an agent derives the outline from the segment script and the verified solution, cites the file and line each slide's fact, figure or number comes from, and marks anything it cannot trace `[UNTRACEABLE]` instead of inventing it. Prompt in **§6e**.
+8. **Turn the module into delivery media.** Once a module is finished, verified, *and scripted*, **derive** the slide deck from it — don't write a new one. This is the same move as step 3 (*derive by removing*) and step 4 (*ground prose in the artifacts*): the verified module is the source of truth, the deck is downstream of it. A **beat** is one timed sub-block of the segment script — so "one slide per beat" means the deck tracks what you actually say, in order. *(Blank form: `Module_Skeleton_TEMPLATE/Teaching_Guide/deck_outline.md`.)* And "deck" means whatever your room shows: slides, printed boards, cards at the station — derived the same way. The teaching guide's verbatim segment script (from step 7) **is** the narration; the deck just visualizes it, beat by beat. Point the AI at the segment transcript and the notebook/worked example and ask for a deck that **mirrors** them — one slide per beat, figures and code lifted from the real artifacts, speaker notes pulled from the script. The hard rule: **the deck visualizes; it never invents.** If a slide wants a fact, an example, or a number that isn't already in the verified module, that's a red flag — either it's wrong, or the module is missing something and you fix it *upstream* first, then let the deck inherit the correction. Build slides *first* and they become the de facto curriculum you never checked; build the module, verify it, *then* let the deck inherit its correctness. Same Command Rule as everywhere else: AI drafts the deck, **you** verify every slide against the source and keep your voice. **RUN:** an agent derives the outline from the segment script and the verified solution, cites the file and line each slide's fact, figure or number comes from, and marks anything it cannot trace `[UNTRACEABLE]` instead of inventing it. Prompt **AI-6.5** (§6e).
 
 > **Limitations of bounding the answer space — read before you trust it.** The LLM is **not your students.** It skews to the *competent median*, so it will **miss the tails** — both the creative-but-valid answer a sharp student gives and the naive-wrong one a struggling student gives. It can be **confidently wrong** (apply the red-flag tells), so its "range" may include answers that aren't actually valid and exclude ones that are. It works best where answers are **derivable from given data** (an analytics capstone) and weakest for judgment-, context-, or opinion-heavy tasks where your real audience's reasoning differs from the model's. So: use it to **widen** your sense of the range and seed feedback — never to **define** the acceptable set. Don't let it anchor you into marking down a valid answer it didn't think of. Treat its output as input (the Command Rule), verify against real student work, and **update the envelope after the first run** (§9, Evaluate & Improve).
 
@@ -754,7 +766,7 @@ Before and during design, convene a panel whose members **want different things.
 | **The Senior Administrator** | Market relevance and industry-ready skills |
 | **The naive Student** | "I don't know this yet — how do I actually learn it, and why does it matter?" |
 
-Invoke them while you're making decisions, decomposing, and writing the MDD: *"Council, weigh in — where do you disagree on this?"* You're not chasing consensus; you want the **tension** (novelty vs. learnability vs. relevance vs. accessibility) so you decide it on purpose. **They advise; you decide** (the Command Rule, §0). (Keep the persona table where you can paste it — §10 has it written out as a ready-made system prompt.) **RUN:** run the four as four *separate* agents, each reading your Decisions and Objectives itself, with a fifth collecting the positions unchanged. One model playing four voices converges; four contexts actually disagree. Prompt in **§6e**.
+Invoke them while you're making decisions, decomposing, and writing the MDD: *"Council, weigh in — where do you disagree on this?"* You're not chasing consensus; you want the **tension** (novelty vs. learnability vs. relevance vs. accessibility) so you decide it on purpose. **They advise; you decide** (the Command Rule, §0). (Keep the persona table where you can paste it — §10 has it written out as a ready-made system prompt.) **RUN:** run the four as four *separate* agents, each reading your Decisions and Objectives itself, with a fifth collecting the positions unchanged. One model playing four voices converges; four contexts actually disagree. Prompt **AI-6.3** (§6e).
 
 ### The Review Council — run it *after a draft exists* (cooperative lenses, scored)
 
@@ -783,7 +795,7 @@ Once a module is drafted, convene a *different* panel — four **cooperative** r
 
 **When to run it (the cadence):**
 
-- **After every module** — the moment a module's materials are drafted (right after Section 6 production), *before* you move on to the next module. Revise that module, then continue. Running it per-module keeps small problems from compounding across the course. **RUN:** the Review Council can trigger itself when a module folder is complete — four separate reviewers reading the folder, a fifth collecting the reports unchanged. No agent edits any file. Prompt in **§6e**.
+- **After every module** — the moment a module's materials are drafted (right after Section 6 production), *before* you move on to the next module. Revise that module, then continue. Running it per-module keeps small problems from compounding across the course. **RUN:** the Review Council can trigger itself when a module folder is complete — four separate reviewers reading the folder, a fifth collecting the reports unchanged. No agent edits any file. Prompt **AI-6.4** (§6e).
 - **Once more at the very end** — run the same panel across the *entire* course for end-to-end consistency and threading.
 
 The council *advises*; you decide. A low score is a prompt to revise, not an order — but ignoring a factuality flag is on you.
@@ -800,7 +812,7 @@ When your course design is drafted, do one last sweep against the wider world. A
 
 Run this on the **whole course**, late — after decomposition and a draft MDD, so you're checking real coverage, not a sketch.
 
-**RUN:** a *research* agent with live sources is the agentic form of this check — it returns each item with a source you can open, which model memory cannot. That is the "current research with citations" row of §6d. Prompt in **§6e**.
+**RUN:** a *research* agent with live sources is the agentic form of this check — it returns each item with a source you can open, which model memory cannot. That is the "current research with citations" row of §6d. Prompt **AI-6.6** (§6e).
 
 ## 6d. Pick the Tool That Fits the Artifact
 
@@ -833,25 +845,25 @@ Everything in §6a–§6c was written for a chat window, and it all still works 
 
 **The prompts.** File names are the skeleton's generic ones (bare names — the skeleton's README table maps each to its folder); rename them to your course's form.
 
-> **Build, degrade, verify (steps 2, 3 and 6).** *"Build `complete_solution` for this module from its MDD row and its minute-by-minute agenda. Run it top to bottom on the shipped data in `pre_class/data/`, and record the expected output beside each step. Then derive three files from it — `follow_along` (complete); `practice_fillin` (four to eight blanks — decisions, not syntax — with the expected result beside each); and `post_class/practice` (TODOs with hints that name the purpose, never the answer). Run all three against the solution. Stop when everything executes, and report what you could not verify."*
+> **AI-6.1 — Build, degrade, verify (steps 2, 3 and 6).** *"Build `complete_solution` for this module from its MDD row and its minute-by-minute agenda. Run it top to bottom on the shipped data in `pre_class/data/`, and record the expected output beside each step. Then derive three files from it — `follow_along` (complete); `practice_fillin` (four to eight blanks — decisions, not syntax — with the expected result beside each); and `post_class/practice` (TODOs with hints that name the purpose, never the answer). Run all three against the solution. Stop when everything executes, and report what you could not verify."*
 >
 > **Verify:** the blanks are decisions, not syntax; the hints point without answering; the time budget (step 6) is yours. For a hands-on or judgment module nothing executes — the agent builds, degrades and reports, and the *run* is you doing the thing.
 
-> **Bound the answer space (step 5b).** *"Here is the assignment in `guided_walkthrough` and my axes in `axes`. Answer the assignment ten times, each in a separate context with no memory of the others, varying the approach each time — different structure, different emphasis, one deliberately weak. Save each as `range/answer_01` through `answer_10`. Then, in a fresh context, read the ten and sort each against my axes into strong / typical / off-base. Write the table to `envelope`. Do not write the feedback bank; that is mine."*
+> **AI-6.2 — Bound the answer space (step 5b).** *"My axes are in `axes`; the assignment is `guided_walkthrough`. Answer the assignment ten times, each in a separate context with no memory of the others, varying the approach each time — different structure, different emphasis, one deliberately weak. Save each as `range/answer_01` through `answer_10`. Then, in a fresh context, read the ten and sort each against my axes into strong / typical / off-base. Write the table to `envelope`. Do not write the feedback bank; that is mine."*
 >
 > **Verify:** the axes came from your exemplar; you check the bands and write the bank.
 
-> **Design Council (§6b).** *"I am deciding: [the decision, in one or two sentences, with the options]. Run four separate agents, each reading the Decisions and Objectives documents in this folder: the Teacher (newest, most engaging techniques), the Curriculum Developer (coherence and fit to the time), the Administrator (practical, affordable, scalable), the Naive Student (anything they cannot follow). Each argues for the option it prefers and names what it would give up. Collect the four positions unchanged and list the tradeoffs where they conflict. Do not recommend. Change no file."*
+> **AI-6.3 — Design Council (§6b).** *"I am deciding: [the decision, in one or two sentences, with the options]. Run four separate agents, each reading the Decisions and Objectives documents in this folder: the Teacher (newest, most engaging techniques), the Curriculum Developer (coherence and fit to the time), the Administrator (practical, affordable, scalable), the Naive Student (anything they cannot follow). Each argues for the option it prefers and names what it would give up. Collect the four positions unchanged and list the tradeoffs where they conflict. Do not recommend. Change no file."*
 
-> **Review Council (§6b).** *"Run four independent reviewers, each in a separate context, each reading this module folder in full: SME (factuality), Student (clarity), Instructional Designer (teaching principles), Professor (rigor). Each scores 1 to 5 on consistency, delivery, factuality and teaching principles, with an overall score and ship/revise. Then collect the four reports unchanged and list where they disagree. Do not edit any file."* For the end-of-course pass add: *"Run the same four reviewers across every module folder in MDD order, scoring consistency across modules as well as within."*
+> **AI-6.4 — Review Council (§6b).** *"Run four independent reviewers, each in a separate context, each reading this module folder in full: SME (factuality), Student (clarity), Instructional Designer (teaching principles), Professor (rigor) — plus the lens my field can't ship without: [___]. Each scores 1 to 5 on consistency, delivery, factuality and teaching principles, with an overall score and ship/revise. Then collect the reports unchanged and list where they disagree. Do not edit any file."* For the end-of-course pass add: *"Run the same four reviewers across every module folder in MDD order, scoring consistency across modules as well as within."*
 >
 > **Verify:** councils advise; you decide. No agent edits any file.
 
-> **Deck derivation (step 8).** *"Read `segment_scripts` and `complete_solution`. Write `deck_outline`: one slide per timed sub-block, speaker notes lifted from the script, figures and code lifted from the solution. For every slide, cite the file and line each fact, figure or number comes from. Any slide that needs something not in those two files gets `[UNTRACEABLE]` instead of invented content. Build nothing else."*
+> **AI-6.5 — Deck derivation (step 8).** *"Read the segment scripts and the complete solution — `segment_scripts`, `complete_solution`. Write `deck_outline`: one slide per timed sub-block, speaker notes lifted from the script, figures and code lifted from the solution. For every slide, cite the file and line each fact, figure or number comes from. Any slide that needs something not in those two files gets `[UNTRACEABLE]` instead of invented content. Build nothing else."*
 >
 > **Verify:** every `[UNTRACEABLE]` is either wrong or a hole in the module — fix it upstream, then let the deck inherit the correction.
 
-> **Comprehensiveness check (§6c).** *"Read the Decisions document and the MDD in this folder. Using live web sources, find what courses teaching [subject] to [audience] typically cover that this MDD does not, and what diagrams or explanations they use for the hard parts. Return each item with a source I can open. Mark anything you think is out of scope for the depth set in Decisions. Change no file."*
+> **AI-6.6 — Comprehensiveness check (§6c).** *"Read the Decisions document and the MDD in this folder. Using live web sources, find what courses teaching [subject] to [audience] typically cover that this MDD does not, and what diagrams or explanations they use for the hard parts. Return each item with a source I can open. Mark anything you think is out of scope for the depth set in Decisions. Change no file."*
 >
 > **Verify:** input, not instruction — open the sources; keep only what your audience needs.
 
@@ -873,11 +885,11 @@ For most workplace domain experts, the goal is usually an **MVP / proof-of-conce
 
 > **Keep asking "why" until you'd be comfortable saying "I don't know" to the class.** Most people stop at a reasonable place. The ones who'd go deeper anyway will — you wouldn't have stopped them.
 
-> **AI can help here — SIMULATE.** The rule above is an interrogation, and AI will ask "why" indefinitely without getting bored or embarrassed.
+> **AI can help here — AI-7.1 · CHECK.** The rule above is an interrogation. Don't run it as a conversation — run it over the explanation you've actually written, against the depth rule in your decisions.
 >
-> *"I'm teaching [X] to [audience] whose goal is [Y]. Ask me 'why' about my explanation, one question at a time. Don't answer for me."*
+> *"Here is my Decisions doc and my explanation of [concept] from [segment / complete solution]. List the 'why' questions a student at this level would ask about it, in the order they'd arise. Mark where my depth rule says to stop, and the first question before that point that my explanation doesn't answer."*
 >
-> **Verify:** stop when you'd be comfortable saying *"I don't know"* to the class. It supplies the questions; **the stopping point is your judgment about your audience, and stays yours.**
+> **Verify:** the stop line is yours — anything past it is depth you chose not to teach; anything before it that's unanswered is a hole. It supplies the chain of questions; **the stopping point is your judgment about your audience, and stays yours.**
 
 And a check on your own curiosity: *will going deeper benefit the students, or just satisfy me?* If it's only you, stop. Depth should be **additive** — if questions come in deeper than expected, refine *up* next time. Never go subtractive ("I just went over their heads").
 
@@ -896,15 +908,15 @@ A course only works if people can actually *get into* it — and people vary wid
 
 The standard frame is **Universal Design for Learning (UDL)** — offer more than one way through three things:
 
-> **AI can help here — PRODUCE · RUN.** Alt-text is the most-skipped item in this section and the most mechanical. Draft it, then read every line against the image.
+> **AI can help here — AI-8.1 · PRODUCE · RUN.** Alt-text is the most-skipped item in this section and the most mechanical. Draft it, then read every line against the image.
 >
 > *"Here is my module text and a list of its visuals with what each shows. For each, draft alt-text that conveys what the visual teaches, not just what it depicts."*
 >
 > **Verify:** if the alt-text would let a student answer the question the visual supports, it is right.
 >
-> **Agentic:** one sweep over the module folder returns this, the one-mode-only audit and the captions and transcripts together — the prompt is on the CHECK callout below. Drafts land in a new `accessibility/` folder; nothing existing is touched. The sweep saves you the pasting. It does not save you the reading.
+> **Agentic:** one sweep over the module folder returns this, the one-mode-only audit and the captions and transcripts together — the prompt is on **AI-8.3** below. Drafts land in a new `accessibility/` folder; nothing existing is touched. The sweep saves you the pasting. It does not save you the reading.
 
-> **AI can help here — TRANSLATE.** Captions and transcripts are a reformat, not new content.
+> **AI can help here — AI-8.2 · TRANSLATE.** Captions and transcripts are a reformat, not new content.
 >
 > *"Turn this segment script into captions and this demo into a written transcript. Add nothing that isn't in the source."*
 >
@@ -917,7 +929,7 @@ The standard frame is **Universal Design for Learning (UDL)** — offer more tha
 **UDL in one course.** For the home-coffee course: the pour taught three ways — a captioned video, a written recipe card, and a simple diagram (Representation); relevance made explicit, "café coffee for pennies" (Engagement); mastery shown by an on-camera brew *or* a brew-log (Action & Expression). The same three modes hold for an ML module — a runnable notebook, a written walkthrough, and a diagram; a dataset they care about; a teach-back or a submitted notebook.
 
 
-> **AI can help here — CHECK · RUN.** Run the one-mode-only audit before you walk the checklist by hand.
+> **AI can help here — AI-8.3 · CHECK · RUN.** Run the one-mode-only audit before you walk the checklist by hand.
 >
 > *"Flag any concept in these materials reachable only one way — only by reading, only by a diagram, only by hearing me say it."*
 >
@@ -925,9 +937,9 @@ The standard frame is **Universal Design for Learning (UDL)** — offer more tha
 >
 > **Agentic:** the whole of §8 as one pass. *Agent prompt:* **"Read every file under this module folder. Report each concept reachable only one way (only text, only a diagram, only spoken in the script), with file and location. For each visual in the module, draft alt-text that conveys what it teaches. Turn the segment scripts into captions and the demo into a transcript, adding nothing not in the source. Write all drafts to `accessibility/`; edit no existing file."**
 
-> **AI can help here — WIDEN.** And ask what you haven't thought of.
+> **AI can help here — AI-8.4 · WIDEN.** And ask what you haven't thought of — about *this* material, not materials like it.
 >
-> *"My module is [X] for [audience]. What access barriers should I be thinking about for this kind of material that I probably haven't?"*
+> *"Here is my module and my Decisions doc. For this audience, where does the material assume one way to perceive it, one way to engage with it, or one way to show what was learned? Name the assumption and where it sits."*
 >
 > **Verify:** input, not instruction — you decide which are real for your learners.
 
@@ -964,13 +976,13 @@ You don't need a formal study. **Lightweight is enough:**
 
 - **During delivery:** watch where people get stuck and where energy drops — those are live signals.
 - **After each run, hold a short retro:** What confused people? What ran long or short versus your contact-hour estimate (§3.5)? Which questions came up again and again? Repeated questions are missing content or a missing FAQ.
-- > **AI can help here — SIMULATE.** Before you have real feedback, run a pre-mortem.
+- > **AI can help here — AI-9.1 · SIMULATE.** Before you have real feedback, run a pre-mortem — as one of *your* students, not a generic one.
 >
-> *"You took this module and it didn't work for you. You're not hostile, just honest. What went wrong?"*
+> *"Here is my Decisions doc and my module. You are one of the students it describes, and it didn't work for you. You're not hostile, just honest. What went wrong?"*
 >
 > **Verify:** a prompt for what to watch for — never a finding.
 
-> **AI can help here — TRANSLATE · RUN.** After the retro, turn notes into changes that land somewhere.
+> **AI can help here — AI-9.2 · TRANSLATE · RUN.** After the retro, turn notes into changes that land somewhere.
 >
 > *"Here are my notes from the run. Turn them into specific changes, each naming the MDD row or module file it lands in. Don't propose anything my notes don't support."*
 >
@@ -980,7 +992,7 @@ You don't need a formal study. **Lightweight is enough:**
 
 **Improve additively** (the depth rule's principle): refine *up* where questions went deeper than expected; don't gut what worked.
 - **Land the changes in the MDD and teaching guide** so the next run starts better than this one did.
-- **Update the feedback envelope** (§6a, 5b) with what students actually submitted. The AI's predicted range was a stand-in; real work is the correction. This is the step that turns one run's surprises into next run's prepared feedback. **RUN:** *"Read `envelope` and the real submissions in `retro/submissions/`. Sort each submission against my axes. Report every band the predicted envelope missed and every predicted band no student produced. Propose a revised envelope as `envelope_v2.md`. Do not change the feedback bank."*
+- **Update the feedback envelope** (§6a, 5b) with what students actually submitted. The AI's predicted range was a stand-in; real work is the correction. This is the step that turns one run's surprises into next run's prepared feedback. **AI-9.4 · RUN:** *"Read `envelope` and the real submissions in `retro/submissions/`. Sort each submission against my axes. Report every band the predicted envelope missed and every predicted band no student produced. Propose a revised envelope as `envelope_v2.md`. Do not change the feedback bank."*
 
 **If other people teach it.** The loop above assumes you're the one in the room. When you're not, three things keep ten rooms from drifting into ten courses: **one retro form per room**, so you're comparing like with like; **one named MDD owner**, recorded in the MDD's version row; and a rule that **changes land in the MDD first** — the owner bumps the version and re-issues the teaching guide, rather than each instructor patching their own copy. Instructors send change requests; they don't edit locally. That's the whole governance model, and for most courses it's enough.
 
@@ -992,7 +1004,7 @@ That's the method, start to finish. Everything you need to *do* it — the blank
 
 ## Front it for students: the syllabus
 
-> **AI can help here — TRANSLATE.** The syllabus is a reformat of decisions you already made, so let AI do the reformatting.
+> **AI can help here — AI-9.3 · TRANSLATE.** The syllabus is a reformat of decisions you already made, so let AI do the reformatting.
 >
 > *"From this Decisions doc and MDD, draft the student-facing syllabus. Every fact must come from one of them."*
 >

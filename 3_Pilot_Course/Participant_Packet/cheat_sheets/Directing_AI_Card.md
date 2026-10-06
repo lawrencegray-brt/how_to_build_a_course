@@ -1,6 +1,6 @@
 # Directing AI — Quick Card
 
-*AI does **seven different jobs** in this method, and only one of them is drafting. Knowing which job you're asking for is most of the skill. Every prompt here is paste-ready; every one has a verification step, because **the AI advises — you decide and verify.** Some jobs also have a second form — **RUN** — where an agent reads your course folder and does the work itself; it is marked below wherever it applies.*
+*AI does **seven different jobs** in this method, and only one of them is drafting. Knowing which job you're asking for is most of the skill. Every prompt here is paste-ready; every one has a verification step, because **the AI advises — you decide and verify.** Some jobs also have a second form — **RUN** — where an agent reads your course folder and does the work itself; it is marked below wherever it applies. Every prompt carries the id of its Guide callout — **AI-3.1** is the first callout in §3 — and the Teaching Guide refers to prompts by id.*
 
 ---
 
@@ -27,15 +27,15 @@
 
 ## Always available
 
-**TUTOR**
+**AI-0.1 · TUTOR**
 > "I'm a subject-matter expert, not an instructional designer. When I hit a term I don't know — gradual release, altitude, scaffolding, UDL — explain it using **my own subject** as the example, and tell me which section it matters in."
 
-**CARRY** — chat: paste once, at the start of every working session
+**AI-1.1 · CARRY** — chat: paste once, at the start of every working session
 > "This is my Decisions doc. Treat it as fixed context for everything I ask from now on — don't make me restate the audience, depth or tone."
 
 *If a later draft contradicts your Decisions doc, the context slipped. Re-paste it.*
 
-**CARRY · RUN** — nothing to paste. Put `AGENT_INSTRUCTIONS.md` (in `templates/`) at the root of your course folder, renamed for your tool — `CLAUDE.md`, `.github/copilot-instructions.md`, or `AGENTS.md` — and the agent reads Decisions, Objectives and the MDD before every task. Context can't slip, because it is never pasted.
+**AI-1.1 · CARRY · RUN** — nothing to paste. Put `AGENT_INSTRUCTIONS.md` (in `templates/`) at the root of your course folder, renamed for your tool — `CLAUDE.md`, `.github/copilot-instructions.md`, or `AGENTS.md` — and the agent reads Decisions, Objectives and the MDD before every task. Context can't slip, because it is never pasted.
 
 **Every RUN prompt has the same shape:** name the files to read, name the files to write, say when to stop, say what not to touch. *"Change nothing"* is the agentic form of *"do not rewrite them."*
 
@@ -43,20 +43,20 @@
 
 ## Week 1 — objectives (Guide §1–§2)
 
-**WIDEN — what's missing from my audience?**
+**AI-1.2 · WIDEN — what's missing from my audience?**
 > "My audience is [X]. Who else realistically ends up in this room, and what would they need that my description doesn't cover?"
 
-**CHECK — the four traps**
+**AI-2.1 · CHECK — the four traps**
 > "Here are my objectives. For each, say which it falls into — instructor-focused, activity-not-learning, not measurable, inflated verb — or 'none'. **Do not rewrite them.**"
 
 *The last sentence is the guardrail. Without it, it writes your objectives and the decision has left the room.*
 
-**WIDEN — what objectives am I missing?**
-> "My audience is [X], my goal is [Y], here are my objectives. What do courses like this usually include that I haven't written? **Don't rewrite mine.**"
+**AI-2.2 · WIDEN — what objectives am I missing?**
+> "Here is my Decisions doc and my objectives. For this audience, goal and depth, what would a student in a course like this usually be able to **do** by the end that none of mine names? Give each as a measurable objective at the altitude my depth rule allows — no 'understand' or 'know'. **Don't rewrite mine.**"
 
 *Input, not instruction. You do **not** have to add any of them — the job is to make sure you're excluding things on purpose, not by accident.*
 
-**SIMULATE — is my objective ambiguous?**
+**AI-2.3 · SIMULATE — is my objective ambiguous?**
 > "Here is one objective. Write three different things a student might hand in as evidence they met it."
 
 *If what comes back isn't what you had in mind, **the objective is ambiguous** — and you found out before anyone was assessed on it.*
@@ -65,58 +65,60 @@
 
 ## Week 2 — audit, decompose, MDD (Guide §3–§4)
 
-**WIDEN — stuck on a practice**
-> "I'm answering '[anchor question]' for a course on [X]. Give me five concrete features other courses use. I'll pick or reject."
+**AI-3.1 · WIDEN — stuck on a practice**
+> "Here are my Decisions doc and my course objectives. I'm auditing them against the practice '[anchor question]'. Name the features my course is missing that would answer it — concrete activities, materials or pieces of content, each tied to the objective it serves and fitting the audience and depth in my decisions. Five at most. I'll pick or reject."
 
-**WIDEN — what modules am I missing?**
+*The practice examines **your** objectives and decisions — so they go in, not your topic. A feature you reject is still a decision.*
+
+**AI-3.5.1 · WIDEN — what modules am I missing?**
 > "Here are my course objectives and my module list. What modules would a course like this usually have that I don't? **Don't reorganise mine.**"
 
-**SIMULATE — test the sequence**
+**AI-3.5.2 · SIMULATE — test the sequence**
 > "You're a student who just finished Module 3. Based only on that, what do you expect Module 4 to teach? What would confuse you if it came next?"
 
 *If its expectation doesn't match your Module 4, your order has a seam.*
 
-**CHECK — the trace-back test, run cold**
+**AI-4.1 · CHECK — the trace-back test, run cold**
 > "Here are my course objectives and my module list. Name any module that doesn't trace to an objective, and any objective no module serves."
 
 *For each flag: scope creep to cut, or an objective you forgot to write?*
 
-**CHECK · RUN — the same test, over your folder**
+**AI-4.1 · CHECK · RUN — the same test, over your folder**
 > "Read every file under this folder. Report: each →CO# that resolves to nothing; each CO no module serves; each `<Created>` with no file; each MDD activity missing from a `minute_by_minute.md`. List only, with file paths. Change nothing."
 
 *The first RUN of the course, and it's read-only. Whatever it lists is a question, not a verdict.*
 
-**TRANSLATE — the syllabus falls out**
+**AI-9.3 · TRANSLATE — the syllabus falls out**
 > "From this Decisions doc and MDD, draft the student-facing syllabus. Every fact must come from one of them."
 
 ---
 
 ## Week 3 — structure and access (Guide §5, §8)
 
-**WIDEN — make a vague activity buildable**
-> "Module objective: [X]. My three rungs are [I do / we do / you do] = [Y]. Give me three concrete named activities for the 'we do' rung — each with what's provided and what the student supplies. **Name them; don't write them.**"
+**AI-5.1 · WIDEN — make a vague activity buildable**
+> "Here is my Decisions doc. Module objective: [X]. My three rungs are [I do / we do / you do] = [Y]. Give me three concrete named activities for the 'we do' rung that fit this audience and depth — each with what's provided and what the student supplies, blanking decisions rather than syntax. **Name them; don't write them.**"
 
-**SIMULATE — find the missing rung**
+**AI-5.3 · SIMULATE — find the missing rung**
 > "Here's my complete version and my practice version. You're a student who has only seen the complete one. Attempt the practice. Where do you not know what to do?"
 
-**CHECK — portability**
+**AI-5.2 · CHECK — portability**
 > "Read this teaching guide as someone who has never taught this subject. List every place you'd have to improvise."
 
 *This is the real bar: could someone **else** teach it from the page alone?*
 
-**PRODUCE — alt-text for every visual**
+**AI-8.1 · PRODUCE — alt-text for every visual**
 > "Here is my module text and a list of its visuals with what each shows. For each, draft alt-text that conveys what the visual **teaches**, not just what it depicts."
 
-**CHECK — the one-mode-only audit**
+**AI-8.3 · CHECK — the one-mode-only audit**
 > "Flag any concept in these materials reachable only one way — only by reading, only by a diagram, only by hearing me say it."
 
-**WIDEN — barriers I haven't considered**
-> "My module is [X] for [audience]. What access barriers should I be thinking about for this kind of material that I probably haven't?"
+**AI-8.4 · WIDEN — barriers I haven't considered**
+> "Here is my module and my Decisions doc. For this audience, where does the material assume one way to perceive it, one way to engage with it, or one way to show what was learned? Name the assumption and where it sits."
 
-**TRANSLATE — captions and transcripts**
+**AI-8.2 · TRANSLATE — captions and transcripts**
 > "Turn this segment script into captions and this demo into a written transcript. **Add nothing that isn't in the source.**"
 
-**CHECK + PRODUCE + TRANSLATE · RUN — all of §8 as one sweep**
+**AI-8.3 · RUN — all of §8 as one sweep**
 > "Read every file under this module folder. Report each concept reachable only one way (only text, only a diagram, only spoken in the script), with file and location. For each visual, draft alt-text that conveys what it teaches. Turn the segment scripts into captions and the demo into a transcript, adding nothing not in the source. Write all drafts to `accessibility/`; edit no existing file."
 
 *The sweep saves you the pasting. It does not save you the reading — every alt-text line still gets read against its image.*
@@ -125,21 +127,21 @@
 
 ## Week 4 — produce (Guide §6)
 
-This is PRODUCE's week, and the Guide walks the loop step by step — set the persona, build the complete version, degrade it into practice, bound the answer space, verify every line. **Use §6a, not this card.** The two councils and the comprehensiveness check are in §6b and §6c. **With an agent, §6e has the same loop as six prompts** — build-degrade-verify, bounding, both councils, the deck, the comprehensiveness check — and the one rule that matters most there: *the agent's report is not your verification.* Keep the log (`AI_Direction_Log_TEMPLATE`) either way.
+This is PRODUCE's week, and the Guide walks the loop step by step — set the persona, build the complete version, degrade it into practice, bound the answer space, verify every line. **Use §6a, not this card.** The two councils and the comprehensiveness check are in §6b and §6c. **With an agent, §6e has the same loop as six prompts, AI-6.1 to AI-6.6** — build-degrade-verify (6.1), bounding (6.2), the Design and Review Councils (6.3, 6.4), the deck (6.5), the comprehensiveness check (6.6) — and the one rule that matters most there: *the agent's report is not your verification.* Keep the log (`AI_Direction_Log_TEMPLATE`) either way.
 
 ---
 
 ## Week 5 — evaluate (Guide §9)
 
-**SIMULATE — a pre-mortem, before you have real feedback**
-> "You took this module and it didn't work for you. You're not hostile, just honest. What went wrong?"
+**AI-9.1 · SIMULATE — a pre-mortem, before you have real feedback**
+> "Here is my Decisions doc and my module. You are one of the students it describes, and it didn't work for you. You're not hostile, just honest. What went wrong?"
 
 *A prompt for what to watch for — never a finding.*
 
-**TRANSLATE — retro notes into real changes**
+**AI-9.2 · TRANSLATE — retro notes into real changes**
 > "Here are my notes from the run. Turn them into specific changes, each naming the MDD row or module file it lands in. **Don't propose anything my notes don't support.**"
 
-**TRANSLATE · RUN — the same, as a diff against your folder**
+**AI-9.2 · TRANSLATE · RUN — the same, as a diff against your folder**
 > "Read `retro/run_<date>.md` and the whole course folder. Turn each note into a specific change that names the MDD row or module file it lands in. Propose nothing the notes do not support. Write the proposals to `retro/proposed_changes.md` as a diff I can accept or reject line by line. **Apply nothing.**"
 
 ---
