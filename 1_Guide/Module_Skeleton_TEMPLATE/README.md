@@ -48,4 +48,4 @@ Same in any medium (keep the name): `deep_dives/background`, `self_check`, `quic
 
 ## If you build with an agent
 
-The module folder is what an agent reads; the **course folder above it** is where its standing instruction lives. Put `templates/AGENT_INSTRUCTIONS.md` at the course root — beside your Decisions, Objectives and MDD — renamed for your tool (`CLAUDE.md`, `.github/copilot-instructions.md`, or `AGENTS.md`). Both worked examples carry one at their root so you can see where it sits. The agent prompts that run this skeleton are in Guide §6e; the file names in them are the generic ones in the table above.
+The module folder is what an agent reads; the **course folder above it** is where its standing instruction lives. Put `templates/AGENT_INSTRUCTIONS.md` at the course root — beside your Decisions, Objectives and MDD — renamed `AGENTS.md` (the universal name; `CLAUDE.md` for Claude Code). Both worked examples carry one at their root so you can see where it sits. The agent prompts that run this skeleton are in Guide §6e; the file names in them are the generic ones in the table above.

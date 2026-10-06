@@ -1,6 +1,6 @@
 # Agent Instructions — Course Master
 
-*Copy this file to the **root of your course folder** — beside your Decisions, Objectives and MDD — and rename it for your tool: `CLAUDE.md` (Claude Code), `.github/copilot-instructions.md` (VS Code Copilot), `AGENTS.md` (Codex and most others). It is the standing instruction every agent run starts from: the agentic form of the system prompts in Guide §10, read from disk instead of pasted. Keep it short; the agent reads it on every task. (Guide §6e explains what it is for.)*
+*Copy this file to the **root of your course folder** — beside your Decisions, Objectives and MDD — and rename it `AGENTS.md` — the universal name, read by VS Code Copilot, Codex and most agents — or `CLAUDE.md` if you use Claude Code. It is the standing instruction every agent run starts from: the agentic form of the system prompts in Guide §10, read from disk instead of pasted. Keep it short; the agent reads it on every task. (Guide §6e explains what it is for.)*
 
 ---
 

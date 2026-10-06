@@ -35,7 +35,7 @@
 
 *If a later draft contradicts your Decisions doc, the context slipped. Re-paste it.*
 
-**AI-1.1 · CARRY · RUN** — nothing to paste. Put `AGENT_INSTRUCTIONS.md` (in `templates/`) at the root of your course folder, renamed for your tool — `CLAUDE.md`, `.github/copilot-instructions.md`, or `AGENTS.md` — and the agent reads Decisions, Objectives and the MDD before every task. Nothing is pasted, so nothing can slip.
+**AI-1.1 · CARRY · RUN** — nothing to paste. Put `AGENT_INSTRUCTIONS.md` (in `templates/`) at the root of your course folder, renamed `AGENTS.md` — the universal name; Copilot, Codex and most agents read it, Claude Code reads `CLAUDE.md` — and the agent reads Decisions, Objectives and the MDD before every task. Nothing is pasted, so nothing can slip.
 
 **Every RUN prompt has the same shape:** name the files to read, name the files to write, say when to stop, say what not to touch. *"Change nothing"* is the agentic form of *"do not rewrite them."*
 
