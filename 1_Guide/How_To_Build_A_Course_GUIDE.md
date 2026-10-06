@@ -113,10 +113,13 @@ Two things to notice now, because they explain the shape of everything that foll
 
 One job is deliberately withheld: **estimating how long things take.** That is the question AI is worst at and most confident about. Use the Contact-Hour companion and your own measured pace.
 
+**Some callouts carry a second tag: RUN.** Those are the steps where an AI *agent* — a model given your course folder and the ability to run code and loop on its own — does more than one chat turn can. It reads the Decisions doc, the MDD and the module folder itself instead of what you pasted, and it runs the work, checks the result and fixes it before showing you. RUN never changes *who decides*; it changes how much verification arrives already done. The chat prompt beside every RUN tag still works in any LLM window and is the floor — RUN is the upgrade for readers who have an agent. If you are using one, the paste steps go away; it reads the files. **RUN appears only twice before §6** (the §1 CARRY and the §4 CHECK), and both are read-only. The first agent that *writes* anything is in §6. The agent prompts are collected in **§6e**, and the standing instruction an agent reads from your folder is [`AGENT_INSTRUCTIONS.md`](templates/AGENT_INSTRUCTIONS.md).
+
 **Words this guide uses.** A few terms, defined where you first meet them rather than in a glossary you'd have to go find:
 
 - **LLM** — a large language model: ChatGPT, Claude, Gemini and the like. When this guide says "the AI," that's what it means.
 - **System prompt** — the standing instruction you give an AI tool at the start of a project, so you don't retype your context every time.
+- **Agent** — an AI tool given access to your files and the ability to run code and repeat steps until a condition is met. A chat *answers*; an agent *works*. When a callout says **RUN**, it means this.
 - **Scaffolding** — the support you build into practice material, and then remove as students get stronger. §5's gradual-release ramp is scaffolding made concrete.
 - **Altitude** — how high or low an objective aims on Bloom's ladder: *list* is low altitude, *design* is high. Neither is better; they're for different goals.
 - **Stub** — an empty placeholder file, created so the structure is visible before the content exists.
@@ -145,6 +148,8 @@ Here's what each step is and why it's there:
 **First — decisions before production.** Take the time to make the key decisions about your course — who it's for, what they'll be able to do, how deep to go, in what tone — *before* you create any artifacts (assessments, slides, notebooks). Everything downstream runs on those decisions, which is what lets a tool (GenAI, or a teammate) produce most of the material while you keep control of quality. Skip them and you'll write fast and wander; make them first, write them down once, and ten modules come out sounding like one course.
 
 **Second — the Command Rule.** As you work through these steps, you'll put **AI** to work — drafting materials, pressure-testing them, reviewing a draft. The same rule holds every time: **the AI proposes; you decide and verify.** The AI widens your perspective and does the heavy lifting of drafting, but it never makes the final call — **you do.** (The same holds for any human advisor you bring in later.) You've heard "keep a human in the loop"; **the Command Rule is what that means in practice** — the AI drafts, you decide, the same way every time. Wherever you see "it advises, you decide" in this guide, that's the Command Rule.
+
+**Agents make this rule harder to hold, because the loop closes without you.** Two safeguards, and they apply to every RUN callout: an agent **never verifies its own output** — the checker is a second agent, a script, or you — and **"it runs" is never taken to mean "it teaches."** Execution correctness is the agent's job; pedagogical correctness is still yours.
 
 ![One rule — AI advises, you decide — across every place this method uses it.](visuals/commandrule.png){width=68%}
 
@@ -177,9 +182,11 @@ Decide and write down:
 *Blank form:* [`templates/Decisions_TEMPLATE.docx`](templates/Decisions_TEMPLATE.docx). *Example:* see [`2_Worked_Examples/IntroML/01_Decisions.pdf`](../2_Worked_Examples/IntroML/01_Decisions.pdf) — the entire Decisions doc for an 8-week ML course on one page.
 
 
-> **AI can help here — CARRY.** Once this page is filled, paste it in at the start of every AI session so you never restate the audience, depth or tone.
+> **AI can help here — CARRY · RUN.** Once this page is filled, paste it in at the start of every AI session so you never restate the audience, depth or tone.
 >
 > *"This is my Decisions doc. Treat it as fixed context for everything I ask from now on."*
+>
+> **Agentic:** nothing to paste. The agent reads the Decisions doc, the Objectives doc and the MDD from your course folder at the start of every task, because the standing instruction at the folder root tells it to — put [`AGENT_INSTRUCTIONS.md`](templates/AGENT_INSTRUCTIONS.md) there once (renamed for your tool) and the carrying is structural. Context can't slip, because it is never pasted.
 >
 > **Verify:** when a later draft contradicts this page, the context slipped — re-paste it.
 
@@ -486,9 +493,11 @@ The discipline that matters most: **name and itemize the activities.** Not "stud
 *Example:*
 [`2_Worked_Examples/IntroML/03_Sample_MDD_Week1.pdf`](../2_Worked_Examples/IntroML/03_Sample_MDD_Week1.pdf)
 
-> **AI can help here — CHECK.** Run the trace-back cold, before you build anything.
+> **AI can help here — CHECK · RUN.** Run the trace-back cold, before you build anything.
 >
 > *"Here are my course objectives and my module list. Name any module that doesn't trace to an objective, and any objective no module serves."*
+>
+> **Agentic:** the agent walks the folder itself and reports every →CO# that resolves to nothing and every CO no module serves — **list only, with file paths, changing nothing.** Once modules exist, the same pass also checks that every `<Created>` has a file, every audit feature sits in an MDD row, every MDD activity appears in a `minute_by_minute.md`, and every module intro names the one before it. *Agent prompt:* **"Read every file under this folder. Report: each →CO# that resolves to nothing; each CO no module serves; each `<Created>` with no file; each MDD activity missing from a `minute_by_minute.md`; each module whose intro does not name the previous module. List only, with file paths. Change nothing."** Notice the shape — files in, a report out, a stopping condition, and *change nothing* — that is the agentic form of "do not rewrite them," and every agent prompt in this guide has it.
 >
 > **Verify:** for each flag — scope creep to cut, or an objective you forgot to write? (§3.5's rule.)
 
@@ -675,6 +684,8 @@ Now produce. Treat GenAI as a fast junior author who has read your Decisions doc
 
     ![What "complete" is in each medium — three equal answers, not one real one and two substitutes.](visuals/completesolution.png){width=95%}
 3. Create the scaffolded student versions by *removing* support from that complete solution — for a code course, blanking parameters and leaving `TODO`s; for other media, removing steps from a worked template. Because the practice version is *derived* from one that works, it's guaranteed correct.
+
+    **RUN — build, degrade and verify as one loop.** With an agent, steps 2, 3 and 6 run as a single pass: it builds the complete solution, runs it top to bottom on the shipped data, records the expected output beside each step, derives the fill-in and TODO versions, runs those against the solution, and stops when everything executes — reporting what it could not verify. Prompt in **§6e**. *You still decide which blanks are the right decisions to blank and whether the hints point without answering; and for a hands-on or judgment module nothing executes, so "verify" is still you doing the thing.*
 4. Ground all prose (scripts, cheat sheets, guides) in the real artifacts — the notebook is the source of truth, the guide describes it.
 5. **Generate the assessments — two cases, depending on whether the answer converges.**
     - **5a — convergent (one right answer):** generate the quizzes and practice sets. Step 2 already built the single correct solution, so the answer key is derivable from it (a quiz item, a coding exercise).
@@ -688,13 +699,14 @@ Now produce. Treat GenAI as a fast junior author who has read your Decisions doc
           the student-facing half is a checklist in `guided_practice/`.
         - **When the AI's range is weak** — and for judgment-, context- or opinion-heavy work it will be (see the limitations note below) — the axes still come from your exemplar. Write the bands yourself and let the AI only stress-test them.
         - *Worked example:* the IntroML example's `05_Bounding_The_Answer_Space` file walks one real assignment end to end — the axes, the prompt, the collected range, the envelope and the bank.
+        - **RUN:** fan step 2 out as eight to ten *independent* agent runs with no shared context, then a separate pass sorts the results against your axes. Independence is what keeps ten runs from collapsing into one voice. The envelope arrives filled; you check the bands, and the bank stays yours. Prompt in **§6e**.
 
         You're using the AI as a rough *simulator of the student population* to chart the answer space — never to judge a student's work. **It's a feedback envelope, not a grading one:** it tells you what to say, not what to score.
 
         ![A feedback envelope, filled: your axes down the side, the three bands across, and a real example in every cell.](visuals/feedbackenvelope.png){width=95%}
-6. **Verify everything** — run it, check that hints guide without giving answers, and **budget the time for keeps.** The materials now exist, so run the **Contact-Hour companion** again with the **real** minutes and sum them across pre-class, live, practice and post-class. §3.5 sized the module with ballpark numbers; this is where the number becomes true. If a package pushes the module past its container, fix it *here* — trim depth, cut a piece, or move work to pre-/post-class — before you script or build anything further.
+6. **Verify everything** — run it, check that hints guide without giving answers, and **budget the time for keeps.** The materials now exist, so run the **Contact-Hour companion** again with the **real** minutes and sum them across pre-class, live, practice and post-class. §3.5 sized the module with ballpark numbers; this is where the number becomes true. If a package pushes the module past its container, fix it *here* — trim depth, cut a piece, or move work to pre-/post-class — before you script or build anything further. **RUN:** if an agent ran steps 2–6 as a loop it has already proved the code executes — so verify everything it *could not*: hint quality, tone, and the time budget. Its own report is never the verification.
 7. **Write the teaching guide — now the materials exist.** With the module built and verified, you can finally script what to *say* about it. §5 gave you the spec and the agenda; here you write the **verbatim segment scripts** that narrate the produced materials (the notebook, the practice, the demo). This is why the teaching guide comes near-last — it describes things that didn't exist until step 6. *(Use the §5 anatomy + [`templates/Teaching_Guide_Segment_TEMPLATE.docx`](templates/Teaching_Guide_Segment_TEMPLATE.docx); AI drafts from the real artifacts, you verify and keep your voice.)*
-8. **Turn the module into delivery media.** Once a module is finished, verified, *and scripted*, **derive** the slide deck from it — don't write a new one. This is the same move as step 3 (*derive by removing*) and step 4 (*ground prose in the artifacts*): the verified module is the source of truth, the deck is downstream of it. A **beat** is one timed sub-block of the segment script — so "one slide per beat" means the deck tracks what you actually say, in order. *(Blank form: `Module_Skeleton_TEMPLATE/Teaching_Guide/deck_outline.md`.)* And "deck" means whatever your room shows: slides, printed boards, cards at the station — derived the same way. The teaching guide's verbatim segment script (from step 7) **is** the narration; the deck just visualizes it, beat by beat. Point the AI at the segment transcript and the notebook/worked example and ask for a deck that **mirrors** them — one slide per beat, figures and code lifted from the real artifacts, speaker notes pulled from the script. The hard rule: **the deck visualizes; it never invents.** If a slide wants a fact, an example, or a number that isn't already in the verified module, that's a red flag — either it's wrong, or the module is missing something and you fix it *upstream* first, then let the deck inherit the correction. Build slides *first* and they become the de facto curriculum you never checked; build the module, verify it, *then* let the deck inherit its correctness. Same Command Rule as everywhere else: AI drafts the deck, **you** verify every slide against the source and keep your voice.
+8. **Turn the module into delivery media.** Once a module is finished, verified, *and scripted*, **derive** the slide deck from it — don't write a new one. This is the same move as step 3 (*derive by removing*) and step 4 (*ground prose in the artifacts*): the verified module is the source of truth, the deck is downstream of it. A **beat** is one timed sub-block of the segment script — so "one slide per beat" means the deck tracks what you actually say, in order. *(Blank form: `Module_Skeleton_TEMPLATE/Teaching_Guide/deck_outline.md`.)* And "deck" means whatever your room shows: slides, printed boards, cards at the station — derived the same way. The teaching guide's verbatim segment script (from step 7) **is** the narration; the deck just visualizes it, beat by beat. Point the AI at the segment transcript and the notebook/worked example and ask for a deck that **mirrors** them — one slide per beat, figures and code lifted from the real artifacts, speaker notes pulled from the script. The hard rule: **the deck visualizes; it never invents.** If a slide wants a fact, an example, or a number that isn't already in the verified module, that's a red flag — either it's wrong, or the module is missing something and you fix it *upstream* first, then let the deck inherit the correction. Build slides *first* and they become the de facto curriculum you never checked; build the module, verify it, *then* let the deck inherit its correctness. Same Command Rule as everywhere else: AI drafts the deck, **you** verify every slide against the source and keep your voice. **RUN:** an agent derives the outline from the segment script and the verified solution, cites the file and line each slide's fact, figure or number comes from, and marks anything it cannot trace `[UNTRACEABLE]` instead of inventing it. Prompt in **§6e**.
 
 > **Limitations of bounding the answer space — read before you trust it.** The LLM is **not your students.** It skews to the *competent median*, so it will **miss the tails** — both the creative-but-valid answer a sharp student gives and the naive-wrong one a struggling student gives. It can be **confidently wrong** (apply the red-flag tells), so its "range" may include answers that aren't actually valid and exclude ones that are. It works best where answers are **derivable from given data** (an analytics capstone) and weakest for judgment-, context-, or opinion-heavy tasks where your real audience's reasoning differs from the model's. So: use it to **widen** your sense of the range and seed feedback — never to **define** the acceptable set. Don't let it anchor you into marking down a valid answer it didn't think of. Treat its output as input (the Command Rule), verify against real student work, and **update the envelope after the first run** (§9, Evaluate & Improve).
 
@@ -742,7 +754,7 @@ Before and during design, convene a panel whose members **want different things.
 | **The Senior Administrator** | Market relevance and industry-ready skills |
 | **The naive Student** | "I don't know this yet — how do I actually learn it, and why does it matter?" |
 
-Invoke them while you're making decisions, decomposing, and writing the MDD: *"Council, weigh in — where do you disagree on this?"* You're not chasing consensus; you want the **tension** (novelty vs. learnability vs. relevance vs. accessibility) so you decide it on purpose. **They advise; you decide** (the Command Rule, §0). (Keep the persona table where you can paste it — §10 has it written out as a ready-made system prompt.)
+Invoke them while you're making decisions, decomposing, and writing the MDD: *"Council, weigh in — where do you disagree on this?"* You're not chasing consensus; you want the **tension** (novelty vs. learnability vs. relevance vs. accessibility) so you decide it on purpose. **They advise; you decide** (the Command Rule, §0). (Keep the persona table where you can paste it — §10 has it written out as a ready-made system prompt.) **RUN:** run the four as four *separate* agents, each reading your Decisions and Objectives itself, with a fifth collecting the positions unchanged. One model playing four voices converges; four contexts actually disagree. Prompt in **§6e**.
 
 ### The Review Council — run it *after a draft exists* (cooperative lenses, scored)
 
@@ -771,7 +783,7 @@ Once a module is drafted, convene a *different* panel — four **cooperative** r
 
 **When to run it (the cadence):**
 
-- **After every module** — the moment a module's materials are drafted (right after Section 6 production), *before* you move on to the next module. Revise that module, then continue. Running it per-module keeps small problems from compounding across the course.
+- **After every module** — the moment a module's materials are drafted (right after Section 6 production), *before* you move on to the next module. Revise that module, then continue. Running it per-module keeps small problems from compounding across the course. **RUN:** the Review Council can trigger itself when a module folder is complete — four separate reviewers reading the folder, a fifth collecting the reports unchanged. No agent edits any file. Prompt in **§6e**.
 - **Once more at the very end** — run the same panel across the *entire* course for end-to-end consistency and threading.
 
 The council *advises*; you decide. A low score is a prompt to revise, not an order — but ignoring a factuality flag is on you.
@@ -788,6 +800,8 @@ When your course design is drafted, do one last sweep against the wider world. A
 
 Run this on the **whole course**, late — after decomposition and a draft MDD, so you're checking real coverage, not a sketch.
 
+**RUN:** a *research* agent with live sources is the agentic form of this check — it returns each item with a source you can open, which model memory cannot. That is the "current research with citations" row of §6d. Prompt in **§6e**.
+
 ## 6d. Pick the Tool That Fits the Artifact
 
 The loop above is tool-agnostic on purpose. One chat window can do most of it — but the failure mode is **reaching for the same tool by habit** instead of the one that fits the job. The **capability** is what's durable; the **product** that provides it this year is not — so the table names *capabilities*, and the specific tools are quarantined in one dated note you can refresh without touching the method.
@@ -802,10 +816,48 @@ The loop above is tool-agnostic on purpose. One chat window can do most of it �
 | Diagrams from text | Turns a paragraph into a clean diagram. |
 | Images / illustrations | Generated figures and visuals (mind licensing). |
 | Slides from a transcript | Step 8 — feed it the **verified** segment script; it visualizes, you verify. |
+| Running and verifying code in a loop | The build-degrade-verify loop of §6a needs a tool that *executes*, not one that describes. |
+| Working across your whole course folder | Drift, trace-back and accessibility checks need every file in view at once, not one pasted module. |
 
 Whatever the tool, the Command Rule holds: it drafts, you verify and keep your voice.
 
-> **Tools I use right now (as of 2026 — expect this to change):** research/citations → *Perplexity* (verify its citations; they can be stale or wrong) · synthesis over my sources → *NotebookLM* · drafting/code/reasoning → *Claude* · diagrams → *Napkin.ai* · images → *Nanobanana* · slides → *Gamma*. **This callout is the only part of §6 built to go stale — refresh it yearly; the table above doesn't move.**
+> **Tools I use right now (as of 2026 — expect this to change):** research/citations → *Perplexity* (verify its citations; they can be stale or wrong) · synthesis over my sources → *NotebookLM* · drafting/code/reasoning → *Claude* · diagrams → *Napkin.ai* · images → *Nanobanana* · slides → *Gamma* · agentic work (RUN) → *Claude Code*, or *VS Code with Copilot in agent mode*. **This callout is the only part of §6 built to go stale — refresh it yearly; the table above doesn't move.**
+
+## 6e. The Loop With an Agent (RUN)
+
+Everything in §6a–§6c was written for a chat window, and it all still works there. This section is the same loop for readers who have an **agent** — a tool that reads your course folder and runs code (§6d names two). Nothing here adds a job or changes who decides; it changes where the AI's context comes from, and how much verification is already done when a draft reaches you.
+
+**Three things you need in place.** An agent tool. Your **course folder as its working directory** — Decisions, Objectives and the MDD at the top level, the module folders beneath them, each built from `Module_Skeleton_TEMPLATE/` (the two worked examples show the shape). And a **standing instruction file at the folder root** — [`AGENT_INSTRUCTIONS.md`](templates/AGENT_INSTRUCTIONS.md), renamed for your tool — which replaces the §10 system prompts for agent work. It tells the agent to read the three governing files before any task and treat them as fixed; to propose and never decide; never to edit those three files; never to change scope, depth or difficulty; never to estimate time; to run what it produces; to *report* what it checks rather than fix it; and that its own verification does not count.
+
+**The pattern for every agent prompt: name the input files, name the output files, state the stopping condition, say what not to touch.** A chat prompt carries its context inline; an agent prompt names files and a stop. The last clause is the same guardrail as *"do not rewrite them"* — written for a tool that can.
+
+**The prompts.** File names are the skeleton's generic ones (bare names — the skeleton's README table maps each to its folder); rename them to your course's form.
+
+> **Build, degrade, verify (steps 2, 3 and 6).** *"Build `complete_solution` for this module from its MDD row and its minute-by-minute agenda. Run it top to bottom on the shipped data in `pre_class/data/`, and record the expected output beside each step. Then derive three files from it — `follow_along` (complete); `practice_fillin` (four to eight blanks — decisions, not syntax — with the expected result beside each); and `post_class/practice` (TODOs with hints that name the purpose, never the answer). Run all three against the solution. Stop when everything executes, and report what you could not verify."*
+>
+> **Verify:** the blanks are decisions, not syntax; the hints point without answering; the time budget (step 6) is yours. For a hands-on or judgment module nothing executes — the agent builds, degrades and reports, and the *run* is you doing the thing.
+
+> **Bound the answer space (step 5b).** *"Here is the assignment in `guided_walkthrough` and my axes in `axes`. Answer the assignment ten times, each in a separate context with no memory of the others, varying the approach each time — different structure, different emphasis, one deliberately weak. Save each as `range/answer_01` through `answer_10`. Then, in a fresh context, read the ten and sort each against my axes into strong / typical / off-base. Write the table to `envelope`. Do not write the feedback bank; that is mine."*
+>
+> **Verify:** the axes came from your exemplar; you check the bands and write the bank.
+
+> **Design Council (§6b).** *"I am deciding: [the decision, in one or two sentences, with the options]. Run four separate agents, each reading the Decisions and Objectives documents in this folder: the Teacher (newest, most engaging techniques), the Curriculum Developer (coherence and fit to the time), the Administrator (practical, affordable, scalable), the Naive Student (anything they cannot follow). Each argues for the option it prefers and names what it would give up. Collect the four positions unchanged and list the tradeoffs where they conflict. Do not recommend. Change no file."*
+
+> **Review Council (§6b).** *"Run four independent reviewers, each in a separate context, each reading this module folder in full: SME (factuality), Student (clarity), Instructional Designer (teaching principles), Professor (rigor). Each scores 1 to 5 on consistency, delivery, factuality and teaching principles, with an overall score and ship/revise. Then collect the four reports unchanged and list where they disagree. Do not edit any file."* For the end-of-course pass add: *"Run the same four reviewers across every module folder in MDD order, scoring consistency across modules as well as within."*
+>
+> **Verify:** councils advise; you decide. No agent edits any file.
+
+> **Deck derivation (step 8).** *"Read `segment_scripts` and `complete_solution`. Write `deck_outline`: one slide per timed sub-block, speaker notes lifted from the script, figures and code lifted from the solution. For every slide, cite the file and line each fact, figure or number comes from. Any slide that needs something not in those two files gets `[UNTRACEABLE]` instead of invented content. Build nothing else."*
+>
+> **Verify:** every `[UNTRACEABLE]` is either wrong or a hole in the module — fix it upstream, then let the deck inherit the correction.
+
+> **Comprehensiveness check (§6c).** *"Read the Decisions document and the MDD in this folder. Using live web sources, find what courses teaching [subject] to [audience] typically cover that this MDD does not, and what diagrams or explanations they use for the hard parts. Return each item with a source I can open. Mark anything you think is out of scope for the depth set in Decisions. Change no file."*
+>
+> **Verify:** input, not instruction — open the sources; keep only what your audience needs.
+
+**Where agents do not belong.** Nothing before §6 produces or decides — the two RUN callouts upstream (§1, §4) are read-only. No agent makes a decision: audience, objectives, depth, scope, what to cut, difficulty and tone stay yours. No agent verifies its own output. Execution correctness is never mistaken for pedagogical correctness. Time estimation stays withheld. And the three governing files — Decisions, Objectives, MDD — are read by agents and edited only by you.
+
+**Keep the log.** Every run goes in your AI-direction + verification log — [`templates/AI_Direction_Log_TEMPLATE.docx`](templates/AI_Direction_Log_TEMPLATE.docx): what you asked, what came back, what it got wrong or said it could not verify, and what you checked. For an agent run, paste its *could not verify* list in and put a check beside every line. That column is the difference between a verified module and a green report.
 
 You can build a module now. One decision has been quietly shaping all of it — how far down to go. That's next.
 
@@ -844,11 +896,13 @@ A course only works if people can actually *get into* it — and people vary wid
 
 The standard frame is **Universal Design for Learning (UDL)** — offer more than one way through three things:
 
-> **AI can help here — PRODUCE.** Alt-text is the most-skipped item in this section and the most mechanical. Draft it, then read every line against the image.
+> **AI can help here — PRODUCE · RUN.** Alt-text is the most-skipped item in this section and the most mechanical. Draft it, then read every line against the image.
 >
 > *"Here is my module text and a list of its visuals with what each shows. For each, draft alt-text that conveys what the visual teaches, not just what it depicts."*
 >
 > **Verify:** if the alt-text would let a student answer the question the visual supports, it is right.
+>
+> **Agentic:** one sweep over the module folder returns this, the one-mode-only audit and the captions and transcripts together — the prompt is on the CHECK callout below. Drafts land in a new `accessibility/` folder; nothing existing is touched. The sweep saves you the pasting. It does not save you the reading.
 
 > **AI can help here — TRANSLATE.** Captions and transcripts are a reformat, not new content.
 >
@@ -863,11 +917,13 @@ The standard frame is **Universal Design for Learning (UDL)** — offer more tha
 **UDL in one course.** For the home-coffee course: the pour taught three ways — a captioned video, a written recipe card, and a simple diagram (Representation); relevance made explicit, "café coffee for pennies" (Engagement); mastery shown by an on-camera brew *or* a brew-log (Action & Expression). The same three modes hold for an ML module — a runnable notebook, a written walkthrough, and a diagram; a dataset they care about; a teach-back or a submitted notebook.
 
 
-> **AI can help here — CHECK.** Run the one-mode-only audit before you walk the checklist by hand.
+> **AI can help here — CHECK · RUN.** Run the one-mode-only audit before you walk the checklist by hand.
 >
 > *"Flag any concept in these materials reachable only one way — only by reading, only by a diagram, only by hearing me say it."*
 >
 > **Verify:** you decide which gaps are worth closing. Not all are.
+>
+> **Agentic:** the whole of §8 as one pass. *Agent prompt:* **"Read every file under this module folder. Report each concept reachable only one way (only text, only a diagram, only spoken in the script), with file and location. For each visual in the module, draft alt-text that conveys what it teaches. Turn the segment scripts into captions and the demo into a transcript, adding nothing not in the source. Write all drafts to `accessibility/`; edit no existing file."**
 
 > **AI can help here — WIDEN.** And ask what you haven't thought of.
 >
@@ -914,15 +970,17 @@ You don't need a formal study. **Lightweight is enough:**
 >
 > **Verify:** a prompt for what to watch for — never a finding.
 
-> **AI can help here — TRANSLATE.** After the retro, turn notes into changes that land somewhere.
+> **AI can help here — TRANSLATE · RUN.** After the retro, turn notes into changes that land somewhere.
 >
 > *"Here are my notes from the run. Turn them into specific changes, each naming the MDD row or module file it lands in. Don't propose anything my notes don't support."*
 >
 > **Verify:** every change traces to something you actually observed.
+>
+> **Agentic:** the agent turns the notes into a reviewable set of changes *against the course files*, each landing in a named MDD row or module file, for the MDD owner to accept or reject line by line — which is exactly the governance model below. *Agent prompt:* **"Read `retro/run_<date>.md` and the whole course folder. Turn each note into a specific change that names the MDD row or module file it lands in. Propose nothing the notes do not support. Write the proposals to `retro/proposed_changes.md` as a diff I can accept or reject line by line. Apply nothing."**
 
 **Improve additively** (the depth rule's principle): refine *up* where questions went deeper than expected; don't gut what worked.
 - **Land the changes in the MDD and teaching guide** so the next run starts better than this one did.
-- **Update the feedback envelope** (§6a, 5b) with what students actually submitted. The AI's predicted range was a stand-in; real work is the correction. This is the step that turns one run's surprises into next run's prepared feedback.
+- **Update the feedback envelope** (§6a, 5b) with what students actually submitted. The AI's predicted range was a stand-in; real work is the correction. This is the step that turns one run's surprises into next run's prepared feedback. **RUN:** *"Read `envelope` and the real submissions in `retro/submissions/`. Sort each submission against my axes. Report every band the predicted envelope missed and every predicted band no student produced. Propose a revised envelope as `envelope_v2.md`. Do not change the feedback bank."*
 
 **If other people teach it.** The loop above assumes you're the one in the room. When you're not, three things keep ten rooms from drifting into ten courses: **one retro form per room**, so you're comparing like with like; **one named MDD owner**, recorded in the MDD's version row; and a rule that **changes land in the MDD first** — the owner bumps the version and re-issues the teaching guide, rather than each instructor patching their own copy. Instructors send change requests; they don't edit locally. That's the whole governance model, and for most courses it's enough.
 
@@ -946,7 +1004,7 @@ One artifact your students see that the steps above never told you to build: the
 
 # 10. Templates & Checklists
 
-The blank forms you fill in as you go. (All six are standalone files in `templates/`; the quality checklists are below.)
+The blank forms you fill in as you go. (All eight are standalone files in `templates/`; the quality checklists are below.)
 
 **Prefer plain text?** Each template below links to the **Word** version, since these are forms you type into — but a Markdown copy of every one sits beside it in the same folder: same content, same filename, `.md` instead of `.docx`.
 
@@ -958,6 +1016,8 @@ The blank forms you fill in as you go. (All six are standalone files in `templat
 - **Decompose worksheet** — [`Decompose_TEMPLATE.docx`](templates/Decompose_TEMPLATE.docx) (§3.5: objectives → evidence → module objectives → modules → fit-check; its module list feeds the MDD).
 - **Master Design Document** — [`MDD_TEMPLATE.docx`](templates/MDD_TEMPLATE.docx).
 - **Teaching-guide segment** (gold tier) — [`Teaching_Guide_Segment_TEMPLATE.docx`](templates/Teaching_Guide_Segment_TEMPLATE.docx)
+- **AI-direction + verification log** — [`AI_Direction_Log_TEMPLATE.docx`](templates/AI_Direction_Log_TEMPLATE.docx) — what you asked, what it got wrong or could not verify, what you checked. One row per run, chat or agent.
+- **Agent instructions** — [`AGENT_INSTRUCTIONS.md`](templates/AGENT_INSTRUCTIONS.md) *(Markdown only — a tool reads it; you don't type into it)* — the standing instruction an agent reads from your course folder root (§6e). Copy it there and rename for your tool: `CLAUDE.md` for Claude Code, `.github/copilot-instructions.md` for VS Code Copilot, `AGENTS.md` for Codex and most others.
 - **Minute-by-minute module agenda** — the Time / Activity / Details table (Section 5, Teaching Guide) — `Module_Skeleton_TEMPLATE/Teaching_Guide/minute_by_minute.md`.
 - **Deck outline** — one slide per beat, derived from the segment script — `Module_Skeleton_TEMPLATE/Teaching_Guide/deck_outline.md`.
 - **Module-folder skeleton (blank, generic names)** — `Module_Skeleton_TEMPLATE/` (copy per module, rename each file to your course's form). Filled examples: `2_Worked_Examples/IntroML/` (code) and `2_Worked_Examples/Coffee/` (non-code).
@@ -970,6 +1030,8 @@ The blank forms you fill in as you go. (All six are standalone files in `templat
 > **Design Council (while you create).** "Act as a panel of four who want different things, and argue it out rather than agreeing: **The Teacher** (pushes for the newest, most engaging techniques), **The Curriculum Developer** (pushes for coherence and what fits the time), **The Administrator** (pushes for what's practical, affordable and scalable), **The Naive Student** (pushes back on anything they can't follow). When I describe a decision, tell me where you disagree and why. Don't reach consensus — surface the tradeoff. I decide."
 
 > **Review Council (after a draft exists).** "Act as four cooperative reviewers of the module I give you, each using one lens: **Subject-Matter Expert** (factuality), **Student** (clarity — can I follow this?), **Instructional Designer** (teaching principles and structure), **Professor** (rigor and depth). Add a lens my field needs if one is missing. Rate the module 1–5 on consistency, delivery, factuality and teaching principles, give an overall score, and end with a ship-or-revise verdict and the three specific changes that would most improve it."
+
+**With an agent**, both councils move out of the chat window: the standing instruction file carries the rules, and each persona runs as a *separate* agent so the four actually disagree (§6e has both prompts).
 
 **Quality checklists.** These three also ship as a **standalone one-page card** — [`Quality_Checklists_Card.pdf`](Quality_Checklists_Card.pdf) — because unlike everything else in this section you'll use them *repeatedly and away from this page*: once per objective, once per module, every module. Print it; don't come back here.
 

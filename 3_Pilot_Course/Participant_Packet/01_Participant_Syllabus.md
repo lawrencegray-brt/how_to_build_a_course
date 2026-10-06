@@ -39,7 +39,7 @@ All materials are provided in your Participant Packet:
 - **The Contact-Hour companion** — for sizing a module to its time.
 - **Two worked examples** — Intro-to-ML (a code course) and Home Coffee Brewing (a non-code course) — copy from whichever fits your subject.
 
-Access to a GenAI tool (e.g., ChatGPT or Claude) is expected for the production work.
+Access to a GenAI tool (e.g., ChatGPT or Claude) is expected for the production work. An **agent-capable** tool — VS Code with Copilot in agent mode, or Claude Code — is optional; it unlocks the steps the Guide and the Directing AI card tag **RUN**, where the AI reads your course folder and does the work itself.
 
 ## ASSESSMENT
 

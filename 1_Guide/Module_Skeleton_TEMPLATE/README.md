@@ -45,3 +45,7 @@ Same in any medium (keep the name): `deep_dives/background`, `self_check`, `quic
 ## Phases, not fixed days
 
 `pre_class / live_session / guided_practice / post_class` are **phases**, not required days. A 90-minute workshop may fold guided practice into the live session; a multi-week course may spread them out. Map them onto *your* container (see the Contact-Hour companion).
+
+## If you build with an agent
+
+The module folder is what an agent reads; the **course folder above it** is where its standing instruction lives. Put `templates/AGENT_INSTRUCTIONS.md` at the course root — beside your Decisions, Objectives and MDD — renamed for your tool (`CLAUDE.md`, `.github/copilot-instructions.md`, or `AGENTS.md`). Both worked examples carry one at their root so you can see where it sits. The agent prompts that run this skeleton are in Guide §6e; the file names in them are the generic ones in the table above.

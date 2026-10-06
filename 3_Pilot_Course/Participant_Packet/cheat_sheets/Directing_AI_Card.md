@@ -1,10 +1,10 @@
 # Directing AI — Quick Card
 
-*AI does **seven different jobs** in this method, and only one of them is drafting. Knowing which job you're asking for is most of the skill. Every prompt here is paste-ready; every one has a verification step, because **the AI advises — you decide and verify.***
+*AI does **seven different jobs** in this method, and only one of them is drafting. Knowing which job you're asking for is most of the skill. Every prompt here is paste-ready; every one has a verification step, because **the AI advises — you decide and verify.** Some jobs also have a second form — **RUN** — where an agent reads your course folder and does the work itself; it is marked below wherever it applies.*
 
 ---
 
-## The seven jobs
+## The seven jobs — and RUN
 
 | Job | What you're asking for | When |
 | --- | --- | --- |
@@ -15,10 +15,13 @@
 | **TRANSLATE** | change the form, add nothing | once content is final |
 | **CARRY** | hold my decisions as standing context | from §1 onward, continuously |
 | **PRODUCE** | draft the artifact | **§6 / Week 4 only** |
+| **RUN** | do one of the jobs above *with my course folder in view*, and loop until it's done | any week — **it inherits the job's timing:** RUN·CHECK any time; RUN·PRODUCE is still Week 4 |
 
 > **Notice PRODUCE is last and alone.** AI drafts nothing before Week 4 — that is *decisions before production*, not an oversight. Before then it checks, widens, simulates and tutors.
 
-> **The job AI does NOT get: ESTIMATE.** "How long will this take?" is the question it is worst at and most confident about. Use the Contact-Hour companion and your own measured pace.
+> **RUN keeps its job tag** — RUN·CHECK, RUN·PRODUCE — because the timing rule attaches to the job, not to RUN. An agent that *checks* is welcome in Week 2; an agent that *drafts* waits for Week 4 like everything else. A chat answers; an agent works — it reads your files instead of what you pasted, runs the work, checks the result and fixes it before you see it. What it never does is decide.
+
+> **The job AI does NOT get: ESTIMATE.** "How long will this take?" is the question it is worst at and most confident about. Use the Contact-Hour companion and your own measured pace. *(Agents are told this in writing — see the instruction file under CARRY.)*
 
 ---
 
@@ -27,10 +30,14 @@
 **TUTOR**
 > "I'm a subject-matter expert, not an instructional designer. When I hit a term I don't know — gradual release, altitude, scaffolding, UDL — explain it using **my own subject** as the example, and tell me which section it matters in."
 
-**CARRY** — paste once, at the start of every working session
+**CARRY** — chat: paste once, at the start of every working session
 > "This is my Decisions doc. Treat it as fixed context for everything I ask from now on — don't make me restate the audience, depth or tone."
 
 *If a later draft contradicts your Decisions doc, the context slipped. Re-paste it.*
+
+**CARRY · RUN** — nothing to paste. Put `AGENT_INSTRUCTIONS.md` (in `templates/`) at the root of your course folder, renamed for your tool — `CLAUDE.md`, `.github/copilot-instructions.md`, or `AGENTS.md` — and the agent reads Decisions, Objectives and the MDD before every task. Context can't slip, because it is never pasted.
+
+**Every RUN prompt has the same shape:** name the files to read, name the files to write, say when to stop, say what not to touch. *"Change nothing"* is the agentic form of *"do not rewrite them."*
 
 ---
 
@@ -74,6 +81,11 @@
 
 *For each flag: scope creep to cut, or an objective you forgot to write?*
 
+**CHECK · RUN — the same test, over your folder**
+> "Read every file under this folder. Report: each →CO# that resolves to nothing; each CO no module serves; each `<Created>` with no file; each MDD activity missing from a `minute_by_minute.md`. List only, with file paths. Change nothing."
+
+*The first RUN of the course, and it's read-only. Whatever it lists is a question, not a verdict.*
+
 **TRANSLATE — the syllabus falls out**
 > "From this Decisions doc and MDD, draft the student-facing syllabus. Every fact must come from one of them."
 
@@ -104,11 +116,16 @@
 **TRANSLATE — captions and transcripts**
 > "Turn this segment script into captions and this demo into a written transcript. **Add nothing that isn't in the source.**"
 
+**CHECK + PRODUCE + TRANSLATE · RUN — all of §8 as one sweep**
+> "Read every file under this module folder. Report each concept reachable only one way (only text, only a diagram, only spoken in the script), with file and location. For each visual, draft alt-text that conveys what it teaches. Turn the segment scripts into captions and the demo into a transcript, adding nothing not in the source. Write all drafts to `accessibility/`; edit no existing file."
+
+*The sweep saves you the pasting. It does not save you the reading — every alt-text line still gets read against its image.*
+
 ---
 
 ## Week 4 — produce (Guide §6)
 
-This is PRODUCE's week, and the Guide walks the loop step by step — set the persona, build the complete version, degrade it into practice, bound the answer space, verify every line. **Use §6a, not this card.** The two councils and the comprehensiveness check are in §6b and §6c.
+This is PRODUCE's week, and the Guide walks the loop step by step — set the persona, build the complete version, degrade it into practice, bound the answer space, verify every line. **Use §6a, not this card.** The two councils and the comprehensiveness check are in §6b and §6c. **With an agent, §6e has the same loop as six prompts** — build-degrade-verify, bounding, both councils, the deck, the comprehensiveness check — and the one rule that matters most there: *the agent's report is not your verification.* Keep the log (`AI_Direction_Log_TEMPLATE`) either way.
 
 ---
 
@@ -122,10 +139,15 @@ This is PRODUCE's week, and the Guide walks the loop step by step — set the pe
 **TRANSLATE — retro notes into real changes**
 > "Here are my notes from the run. Turn them into specific changes, each naming the MDD row or module file it lands in. **Don't propose anything my notes don't support.**"
 
+**TRANSLATE · RUN — the same, as a diff against your folder**
+> "Read `retro/run_<date>.md` and the whole course folder. Turn each note into a specific change that names the MDD row or module file it lands in. Propose nothing the notes do not support. Write the proposals to `retro/proposed_changes.md` as a diff I can accept or reject line by line. **Apply nothing.**"
+
 ---
 
-## The two rules under all of it
+## The three rules under all of it
 
 **You decide and verify.** Every prompt above ends with something you check. "The AI wrote it" is never an excuse for an error, a stale fact, or a tone you'd never use.
 
 **Plausible is not correct.** Two red flags tell you where to dig: **verbosity** (it won't stop explaining) and **certainty** (hedge-free). Where it sounds most sure and over-explains, check hardest. *(Full card: Reviewing AI Output — Red Flags.)*
+
+**The report is not the verification.** An agent that closes its loop and says green has proved it *runs*, not that it *teaches*. Paste its "could not verify" list into your log and check every line yourself — and never let one agent be the checker of its own work.
