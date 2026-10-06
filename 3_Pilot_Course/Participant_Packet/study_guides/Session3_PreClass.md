@@ -13,7 +13,7 @@
     - Claude Code → `CLAUDE.md`
     - most others → `AGENTS.md`
 
-    Then run the trace-back on it — **AI-4.1**, the way you saw in class: *"Read every file under this folder. Report each objective nothing serves and each module tagged to nothing. List only, with file paths. Change nothing."* **Bring what it flagged.** *(No agent tool? Paste the chat version from the Directing AI card — same test, same answer.)*
+    Then run the trace-back on it — **AI-4.1**, the way you saw in class: *"Read the Objectives doc and the MDD in this folder. Report each →CO# tag that points at no course objective, and each course objective no module serves. List only, with file paths. Change nothing."* **Bring what it flagged.** *(No agent tool? Paste the chat version from the Directing AI card — same test, same answer.)*
 
 ## Come ready to
 - Sketch your chosen module's skeleton: the three packages, the I-do → we-do → you-do plan, and where access is built in. (You produce the content *next* week.)

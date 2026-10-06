@@ -186,11 +186,13 @@ Decide and write down:
 >
 > *"This is my Decisions doc. Treat it as fixed context for everything I ask from now on."*
 >
-> **Agentic:** nothing to paste. The agent reads the Decisions doc, the Objectives doc and the MDD from your course folder at the start of every task, because the standing instruction at the folder root tells it to — put [`AGENT_INSTRUCTIONS.md`](templates/AGENT_INSTRUCTIONS.md) there once (renamed for your tool) and the carrying is structural. Context can't slip, because it is never pasted.
+> **RUN:** nothing to paste. The agent reads the Decisions doc, the Objectives doc and the MDD from your course folder at the start of every task, because one file at the folder root tells it to. Nothing is pasted, so nothing can slip.
+>
+> *That file:* [`AGENT_INSTRUCTIONS.md`](templates/AGENT_INSTRUCTIONS.md) — put it there once, renamed for your tool (§6e).
 >
 > **Verify:** when a later draft contradicts this page, the context slipped — re-paste it.
 
-> **AI can help here — AI-1.2 · WIDEN.** Before the audience line sets, ask who else is actually coming.
+> **AI can help here — AI-1.2 · WIDEN.** Before you commit to the audience line, ask who else is actually coming.
 >
 > *"Here is my Decisions doc. Who else realistically ends up in the room for this course, and what would they need that my audience line doesn't cover?"*
 >
@@ -264,9 +266,9 @@ In both, the module objective is narrower and observable, and it already names i
 >
 > **Verify:** **"Do not rewrite them" is the guardrail.** It diagnoses; you fix. Without it, the AI writes your objectives and the decision has left the room.
 
-> **AI can help here — AI-2.2 · WIDEN.** Then ask what you left out — in the unit this section works in, which is objectives, not topics.
+> **AI can help here — AI-2.2 · WIDEN.** Then ask what you left out — and insist on objectives back, not topics.
 >
-> *"Here is my Decisions doc and my objectives. For this audience, goal and depth, what would a student in a course like this usually be able to **do** by the end that none of mine names? Give each as a measurable objective at the altitude my depth rule allows — no 'understand' or 'know'. Don't rewrite mine."*
+> *"Here is my Decisions doc and my objectives. For this audience, goal and depth, what would a student in a course like this usually be able to **do** by the end that none of mine names? Give each as a measurable objective at the depth in my Decisions doc — no 'understand' or 'know'. Don't rewrite mine."*
 >
 > **Verify:** input, not instruction — you do **not** have to add any of them. The job is to make sure you are excluding things *on purpose, not by accident* — and anything that comes back as a topic rather than something a student does is not an objective yet.
 
@@ -299,7 +301,7 @@ And they're **generative, not a grade.** You don't pass or fail — you *answer*
 
 > **AI can help here — AI-3.1 · WIDEN.** Stuck on a practice? Ask for candidates — but the practice examines *your* objectives and decisions, so those are the input, not your topic.
 >
-> *"Here are my Decisions doc and my course objectives. I'm auditing them against the practice '[anchor question]'. Name the features my course is missing that would answer it — concrete activities, materials or pieces of content, each tied to the objective it serves and fitting the audience and depth in my decisions. Five at most. I'll pick or reject."*
+> *"Here are my Decisions doc and my course objectives. I'm auditing them against the practice '[anchor question]'. Name the features my course is missing that would answer it — concrete activities, materials or pieces of content, each tied to the objective it serves and fitting the audience and depth in my Decisions doc. Five at most. I'll pick or reject."*
 >
 > **Verify:** each candidate names the objective it serves; anything that doesn't fit your Decisions doc is out before you weigh it. Input, not instruction — a feature you reject is still a decision made on purpose.
 
@@ -499,15 +501,15 @@ The discipline that matters most: **name and itemize the activities.** Not "stud
 *Example:*
 [`2_Worked_Examples/IntroML/03_Sample_MDD_Week1.pdf`](../2_Worked_Examples/IntroML/03_Sample_MDD_Week1.pdf)
 
-> **AI can help here — AI-4.1 · CHECK · RUN.** Run the trace-back cold, before you build anything.
+> **AI can help here — AI-4.1 · CHECK · RUN.** Run the trace-back before you build anything — and give it nothing but the two lists, so it can't lean on anything else.
 >
 > *"Here are my course objectives and my module list. Name any module that doesn't trace to an objective, and any objective no module serves."*
 >
-> **Agentic:** the agent walks the folder itself and reports every →CO# that resolves to nothing and every CO no module serves — **list only, with file paths, changing nothing.** Once modules exist, the same pass also checks that every `<Created>` has a file, every audit feature sits in an MDD row, every MDD activity appears in a `minute_by_minute.md`, and every module intro names the one before it. *Agent prompt:* **"Read every file under this folder. Report: each →CO# that resolves to nothing; each CO no module serves; each `<Created>` with no file; each MDD activity missing from a `minute_by_minute.md`; each module whose intro does not name the previous module. List only, with file paths. Change nothing."** Notice the shape — files in, a report out, a stopping condition, and *change nothing* — that is the agentic form of "do not rewrite them," and every agent prompt in this guide has it.
+> **RUN:** the agent reads the Objectives doc and the MDD itself and returns the same two lists — **list only, with file paths, changing nothing.** *Agent prompt:* **"Read the Objectives doc and the MDD in this folder. Report each →CO# tag that points at no course objective, and each course objective no module serves. List only, with file paths. Change nothing."** *(The whole-course drift check — every `<Created>` has a file, every activity is on an agenda, every intro names the module before it — is **AI-6.7**, and runs once modules exist.)*
 >
 > **Verify:** for each flag — scope creep to cut, or an objective you forgot to write? (§3.5's rule.)
 
-> **Key separation:** the MDD says *what* activities happen. The **Teaching Guide** (Section 5) says *how and when* to deliver them — including the minute-by-minute agenda. Don't put delivery timing in the MDD.
+**Key separation:** the MDD says *what* activities happen. The **Teaching Guide** (Section 5) says *how and when* to deliver them — including the minute-by-minute agenda. Don't put delivery timing in the MDD.
 
 ## Coherence check #1 — the blueprint (cheapest)
 
@@ -644,7 +646,7 @@ That's enough for you to teach from, months later, and it takes minutes to write
 
 > **AI can help here — AI-5.1 · WIDEN.** If an activity is still vague, get candidates you can choose between.
 >
-> *"Here is my Decisions doc. Module objective: [X]. My three rungs are [I do / we do / you do] = [Y]. Give me three concrete named activities for the 'we do' rung that fit this audience and depth — each with what's provided and what the student supplies, blanking decisions rather than syntax. Name them; don't write them."*
+> *"Here is my Decisions doc. Module objective: [X]. My ramp is: I do = [the demo], we do = [the paired fill-in], you do = [the independent task]. Give me three concrete named activities for the 'we do' rung that fit this audience and depth — each with what's provided and what the student supplies, blanking decisions rather than syntax. Name them; don't write them."*
 >
 > **Verify:** you pick one, or none. *"Students practice"* is not something anyone can build from; a named activity is.
 
@@ -658,7 +660,7 @@ That's enough for you to teach from, months later, and it takes minutes to write
 >
 > *"Here's my complete version and my practice version. You're a student who has only seen the complete one. Attempt the practice. Where do you not know what to do?"*
 >
-> **Verify:** every place it stalls is a missing hint or a rung you skipped. It is simulating a student, so a stall is a question about your scaffolding, not a verdict on it.
+> **Verify:** every place it stalls is a missing hint or a rung you skipped.
 
 **Start from the blank template:** copy `Module_Skeleton_TEMPLATE/` for each module. Its file names are **generic on purpose** — they don't assume what *kind* of course you're building (code, hands-on, writing…), so the one skeleton fits any of them. **Rename each to your course's form** — `complete_solution` becomes `week1_demo.ipynb` for code, or a `recipe_card` for coffee; every stub carries a "code → … · non-code → …" hint. Two filled examples to copy from:
 
@@ -747,7 +749,7 @@ Now produce. Treat GenAI as a fast junior author who has read your Decisions doc
 - **Build in MDD order.** Module 3's hook-back refers to module 2, so building out of order means writing threading lines about modules that don't exist yet. The decompose output (§3.5) already gave you the order; follow it.
 - **Names are fixed by module one.** Rename the skeleton once, then build later modules by copying your *filled* module 1 rather than the blank skeleton. That one habit is most of what makes ten modules look like one course.
 - **If two of you are building**, both hold the same Decisions doc and MDD and neither edits them unilaterally — changes go through whoever owns the MDD (§9). Split by module, never by layer; two people each building half of every module is how voice drift starts.
-- **Check for drift at the end.** Run the Review Council per module as you go, then once more across the finished course (§6b) with the MDD and every agenda in front of it. That last pass is the one that catches the module that quietly became a different course.
+- **Check for drift at the end.** Run the Review Council per module as you go, then once more across the finished course (§6b) with the MDD and every agenda in front of it. That last pass is the one that catches the module that quietly became a different course. **RUN:** its mechanical half is **AI-6.7** (§6e).
 
 ## 6b. The Two AI Councils — Design and Review
 
@@ -849,23 +851,29 @@ Everything in §6a–§6c was written for a chat window, and it all still works 
 >
 > **Verify:** the blanks are decisions, not syntax; the hints point without answering; the time budget (step 6) is yours. For a hands-on or judgment module nothing executes — the agent builds, degrades and reports, and the *run* is you doing the thing.
 
-> **AI-6.2 — Bound the answer space (step 5b).** *"My axes are in `axes`; the assignment is `guided_walkthrough`. Answer the assignment ten times, each in a separate context with no memory of the others, varying the approach each time — different structure, different emphasis, one deliberately weak. Save each as `range/answer_01` through `answer_10`. Then, in a fresh context, read the ten and sort each against my axes into strong / typical / off-base. Write the table to `envelope`. Do not write the feedback bank; that is mine."*
+> **AI-6.2 — Bound the answer space (step 5b).** *"My axes are in `axes`; the assignment is `guided_walkthrough`. Answer the assignment ten times, each in a fresh session with no memory of the others, varying the approach each time — different structure, different emphasis, one deliberately weak. Save each as `range/answer_01` through `answer_10`. Then, in a new session, read the ten and sort each against my axes into strong / typical / off-base. Write the table to `envelope`. Do not write the feedback bank; that is mine."*
 >
 > **Verify:** the axes came from your exemplar; you check the bands and write the bank.
 
-> **AI-6.3 — Design Council (§6b).** *"I am deciding: [the decision, in one or two sentences, with the options]. Run four separate agents, each reading the Decisions and Objectives documents in this folder: the Teacher (newest, most engaging techniques), the Curriculum Developer (coherence and fit to the time), the Administrator (practical, affordable, scalable), the Naive Student (anything they cannot follow). Each argues for the option it prefers and names what it would give up. Collect the four positions unchanged and list the tradeoffs where they conflict. Do not recommend. Change no file."*
+> **AI-6.3 — Design Council (§6b).** *"I am deciding: [the decision, in one or two sentences, with the options]. Run four separate agents, each reading the Decisions doc and the Objectives doc in this folder: the Teacher (newest, most engaging techniques), the Curriculum Developer (coherence and fit to the time), the Administrator (practical, affordable, scalable), the Naive Student (anything they cannot follow). Each argues for the option it prefers and names what it would give up. Collect the four positions unchanged and list the tradeoffs where they conflict. Do not recommend. Change no file."*
+>
+> **Verify:** they advise; you decide — pick one option and say why.
 
-> **AI-6.4 — Review Council (§6b).** *"Run four independent reviewers, each in a separate context, each reading this module folder in full: SME (factuality), Student (clarity), Instructional Designer (teaching principles), Professor (rigor) — plus the lens my field can't ship without: [___]. Each scores 1 to 5 on consistency, delivery, factuality and teaching principles, with an overall score and ship/revise. Then collect the reports unchanged and list where they disagree. Do not edit any file."* For the end-of-course pass add: *"Run the same four reviewers across every module folder in MDD order, scoring consistency across modules as well as within."*
+> **AI-6.4 — Review Council (§6b).** *"Run four independent reviewers, each in a fresh session, each reading this module folder in full: SME (factuality), Student (clarity), Instructional Designer (teaching principles), Professor (rigor) — plus the lens my field can't ship without: [___]. Each scores 1 to 5 on consistency, delivery, factuality and teaching principles, with an overall score and ship/revise. Then collect the reports unchanged and list where they disagree. Do not edit any file."* For the end-of-course pass add: *"Run the same four reviewers across every module folder in MDD order, scoring consistency across modules as well as within."*
 >
 > **Verify:** councils advise; you decide. No agent edits any file.
 
-> **AI-6.5 — Deck derivation (step 8).** *"Read the segment scripts and the complete solution — `segment_scripts`, `complete_solution`. Write `deck_outline`: one slide per timed sub-block, speaker notes lifted from the script, figures and code lifted from the solution. For every slide, cite the file and line each fact, figure or number comes from. Any slide that needs something not in those two files gets `[UNTRACEABLE]` instead of invented content. Build nothing else."*
+> **AI-6.5 — Deck derivation (step 8).** *"Read the segment scripts and the complete solution — `segment_scripts`, `complete_solution`. Write `deck_outline`: one slide per beat (each timed sub-block of the script), speaker notes lifted from the script, figures and code lifted from the solution. For every slide, cite the file and line each fact, figure or number comes from. Any slide that needs something not in those two files gets `[UNTRACEABLE]` instead of invented content. Build nothing else."*
 >
 > **Verify:** every `[UNTRACEABLE]` is either wrong or a hole in the module — fix it upstream, then let the deck inherit the correction.
 
-> **AI-6.6 — Comprehensiveness check (§6c).** *"Read the Decisions document and the MDD in this folder. Using live web sources, find what courses teaching [subject] to [audience] typically cover that this MDD does not, and what diagrams or explanations they use for the hard parts. Return each item with a source I can open. Mark anything you think is out of scope for the depth set in Decisions. Change no file."*
+> **AI-6.6 — Comprehensiveness check (§6c).** *"Read the Decisions doc and the MDD in this folder. Using live web sources, find what courses teaching [subject] to [audience] typically cover that this MDD does not, and what diagrams or explanations they use for the hard parts. Return each item with a source I can open. Mark anything you think is out of scope for the depth in my Decisions doc. Change no file."*
 >
 > **Verify:** input, not instruction — open the sources; keep only what your audience needs.
+
+> **AI-6.7 — Whole-course drift check (§6a, "from one module to ten").** *"Read every file under this course folder. Report: each →CO# tag that points at no course objective; each course objective no module serves; each `<Created>` marker with no file behind it; each MDD activity that appears on no module's `minute_by_minute`; each module whose introduction does not name the module before it. List only, with file paths. Change nothing."*
+>
+> **Verify:** this is the mechanical half of the end-of-course pass; the Review Council across all modules (AI-6.4) is the other half. For each flag — scope creep to cut, or something you forgot to write?
 
 **Where agents do not belong.** Nothing before §6 produces or decides — the two RUN callouts upstream (§1, §4) are read-only. No agent makes a decision: audience, objectives, depth, scope, what to cut, difficulty and tone stay yours. No agent verifies its own output. Execution correctness is never mistaken for pedagogical correctness. Time estimation stays withheld. And the three governing files — Decisions, Objectives, MDD — are read by agents and edited only by you.
 
@@ -885,11 +893,11 @@ For most workplace domain experts, the goal is usually an **MVP / proof-of-conce
 
 > **Keep asking "why" until you'd be comfortable saying "I don't know" to the class.** Most people stop at a reasonable place. The ones who'd go deeper anyway will — you wouldn't have stopped them.
 
-> **AI can help here — AI-7.1 · CHECK.** The rule above is an interrogation. Don't run it as a conversation — run it over the explanation you've actually written, against the depth rule in your decisions.
+> **AI can help here — AI-7.1 · CHECK.** The rule above is an interrogation. Don't run it as a conversation — run it over the explanation you've actually written, against the depth rule in your Decisions doc.
 >
 > *"Here is my Decisions doc and my explanation of [concept] from [segment / complete solution]. List the 'why' questions a student at this level would ask about it, in the order they'd arise. Mark where my depth rule says to stop, and the first question before that point that my explanation doesn't answer."*
 >
-> **Verify:** the stop line is yours — anything past it is depth you chose not to teach; anything before it that's unanswered is a hole. It supplies the chain of questions; **the stopping point is your judgment about your audience, and stays yours.**
+> **Verify:** it supplies the chain of questions; **the stop line is your judgment about your audience, and stays yours.** Anything past it is depth you chose not to teach; anything before it that's unanswered is a hole.
 
 And a check on your own curiosity: *will going deeper benefit the students, or just satisfy me?* If it's only you, stop. Depth should be **additive** — if questions come in deeper than expected, refine *up* next time. Never go subtractive ("I just went over their heads").
 
@@ -914,7 +922,7 @@ The standard frame is **Universal Design for Learning (UDL)** — offer more tha
 >
 > **Verify:** if the alt-text would let a student answer the question the visual supports, it is right.
 >
-> **Agentic:** one sweep over the module folder returns this, the one-mode-only audit and the captions and transcripts together — the prompt is on **AI-8.3** below. Drafts land in a new `accessibility/` folder; nothing existing is touched. The sweep saves you the pasting. It does not save you the reading.
+> **RUN:** one sweep over the module folder returns this, the one-mode-only audit and the captions and transcripts together — the prompt is on **AI-8.3** below. Drafts land in a new `accessibility/` folder; nothing existing is touched. The sweep saves you the pasting. It does not save you the reading.
 
 > **AI can help here — AI-8.2 · TRANSLATE.** Captions and transcripts are a reformat, not new content.
 >
@@ -935,7 +943,7 @@ The standard frame is **Universal Design for Learning (UDL)** — offer more tha
 >
 > **Verify:** you decide which gaps are worth closing. Not all are.
 >
-> **Agentic:** the whole of §8 as one pass. *Agent prompt:* **"Read every file under this module folder. Report each concept reachable only one way (only text, only a diagram, only spoken in the script), with file and location. For each visual in the module, draft alt-text that conveys what it teaches. Turn the segment scripts into captions and the demo into a transcript, adding nothing not in the source. Write all drafts to `accessibility/`; edit no existing file."**
+> **RUN:** the whole of §8 as one pass. *Agent prompt:* **"Read every file under this module folder. Report each concept reachable only one way (only text, only a diagram, only spoken in the script), with file and location. For each visual in the module, draft alt-text that conveys what it teaches. Turn the segment scripts into captions and the demo into a transcript, adding nothing not in the source. Write all drafts to `accessibility/`; edit no existing file."**
 
 > **AI can help here — AI-8.4 · WIDEN.** And ask what you haven't thought of — about *this* material, not materials like it.
 >
@@ -988,11 +996,11 @@ You don't need a formal study. **Lightweight is enough:**
 >
 > **Verify:** every change traces to something you actually observed.
 >
-> **Agentic:** the agent turns the notes into a reviewable set of changes *against the course files*, each landing in a named MDD row or module file, for the MDD owner to accept or reject line by line — which is exactly the governance model below. *Agent prompt:* **"Read `retro/run_<date>.md` and the whole course folder. Turn each note into a specific change that names the MDD row or module file it lands in. Propose nothing the notes do not support. Write the proposals to `retro/proposed_changes.md` as a diff I can accept or reject line by line. Apply nothing."**
+> **RUN:** the agent turns the notes into a reviewable set of changes *against the course files*, each landing in a named MDD row or module file, for the MDD owner to accept or reject line by line — which is exactly the governance model below. *Agent prompt:* **"Read my retro notes — `retro/run_<date>`, in a `retro/` folder beside the modules; create it if it isn't there — and the whole course folder. Turn each note into a specific change that names the MDD row or module file it lands in. Propose nothing the notes do not support. Write the proposals to `retro/proposed_changes.md` as a diff I can accept or reject line by line. Apply nothing."**
 
 **Improve additively** (the depth rule's principle): refine *up* where questions went deeper than expected; don't gut what worked.
 - **Land the changes in the MDD and teaching guide** so the next run starts better than this one did.
-- **Update the feedback envelope** (§6a, 5b) with what students actually submitted. The AI's predicted range was a stand-in; real work is the correction. This is the step that turns one run's surprises into next run's prepared feedback. **AI-9.4 · RUN:** *"Read `envelope` and the real submissions in `retro/submissions/`. Sort each submission against my axes. Report every band the predicted envelope missed and every predicted band no student produced. Propose a revised envelope as `envelope_v2.md`. Do not change the feedback bank."*
+- **Update the feedback envelope** (§6a, 5b) with what students actually submitted. The AI's predicted range was a stand-in; real work is the correction. This is the step that turns one run's surprises into next run's prepared feedback. **AI-9.4 · RUN:** *"Read `envelope` and the real submissions (put them in `retro/submissions/`). Sort each submission against my axes. Report every band the predicted envelope missed and every predicted band no student produced. Propose a revised envelope as `envelope_v2.md`. Do not change the feedback bank."*
 
 **If other people teach it.** The loop above assumes you're the one in the room. When you're not, three things keep ten rooms from drifting into ten courses: **one retro form per room**, so you're comparing like with like; **one named MDD owner**, recorded in the MDD's version row; and a rule that **changes land in the MDD first** — the owner bumps the version and re-issues the teaching guide, rather than each instructor patching their own copy. Instructors send change requests; they don't edit locally. That's the whole governance model, and for most courses it's enough.
 

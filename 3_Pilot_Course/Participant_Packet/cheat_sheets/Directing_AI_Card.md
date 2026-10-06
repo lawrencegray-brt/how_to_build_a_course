@@ -35,7 +35,7 @@
 
 *If a later draft contradicts your Decisions doc, the context slipped. Re-paste it.*
 
-**AI-1.1 · CARRY · RUN** — nothing to paste. Put `AGENT_INSTRUCTIONS.md` (in `templates/`) at the root of your course folder, renamed for your tool — `CLAUDE.md`, `.github/copilot-instructions.md`, or `AGENTS.md` — and the agent reads Decisions, Objectives and the MDD before every task. Context can't slip, because it is never pasted.
+**AI-1.1 · CARRY · RUN** — nothing to paste. Put `AGENT_INSTRUCTIONS.md` (in `templates/`) at the root of your course folder, renamed for your tool — `CLAUDE.md`, `.github/copilot-instructions.md`, or `AGENTS.md` — and the agent reads Decisions, Objectives and the MDD before every task. Nothing is pasted, so nothing can slip.
 
 **Every RUN prompt has the same shape:** name the files to read, name the files to write, say when to stop, say what not to touch. *"Change nothing"* is the agentic form of *"do not rewrite them."*
 
@@ -52,7 +52,7 @@
 *The last sentence is the guardrail. Without it, it writes your objectives and the decision has left the room.*
 
 **AI-2.2 · WIDEN — what objectives am I missing?**
-> "Here is my Decisions doc and my objectives. For this audience, goal and depth, what would a student in a course like this usually be able to **do** by the end that none of mine names? Give each as a measurable objective at the altitude my depth rule allows — no 'understand' or 'know'. **Don't rewrite mine.**"
+> "Here is my Decisions doc and my objectives. For this audience, goal and depth, what would a student in a course like this usually be able to **do** by the end that none of mine names? Give each as a measurable objective at the depth in my Decisions doc — no 'understand' or 'know'. **Don't rewrite mine.**"
 
 *Input, not instruction. You do **not** have to add any of them — the job is to make sure you're excluding things on purpose, not by accident.*
 
@@ -66,7 +66,7 @@
 ## Week 2 — audit, decompose, MDD (Guide §3–§4)
 
 **AI-3.1 · WIDEN — stuck on a practice**
-> "Here are my Decisions doc and my course objectives. I'm auditing them against the practice '[anchor question]'. Name the features my course is missing that would answer it — concrete activities, materials or pieces of content, each tied to the objective it serves and fitting the audience and depth in my decisions. Five at most. I'll pick or reject."
+> "Here are my Decisions doc and my course objectives. I'm auditing them against the practice '[anchor question]'. Name the features my course is missing that would answer it — concrete activities, materials or pieces of content, each tied to the objective it serves and fitting the audience and depth in my Decisions doc. Five at most. I'll pick or reject."
 
 *The practice examines **your** objectives and decisions — so they go in, not your topic. A feature you reject is still a decision.*
 
@@ -84,9 +84,9 @@
 *For each flag: scope creep to cut, or an objective you forgot to write?*
 
 **AI-4.1 · CHECK · RUN — the same test, over your folder**
-> "Read every file under this folder. Report: each →CO# that resolves to nothing; each CO no module serves; each `<Created>` with no file; each MDD activity missing from a `minute_by_minute.md`. List only, with file paths. Change nothing."
+> "Read the Objectives doc and the MDD in this folder. Report each →CO# tag that points at no course objective, and each course objective no module serves. List only, with file paths. Change nothing."
 
-*The first RUN of the course, and it's read-only. Whatever it lists is a question, not a verdict.*
+*The first RUN of the course, and it's read-only. Whatever it lists is a question, not a verdict. (The whole-course drift check, once modules exist, is **AI-6.7** — Guide §6e.)*
 
 **AI-9.3 · TRANSLATE — the syllabus falls out**
 > "From this Decisions doc and MDD, draft the student-facing syllabus. Every fact must come from one of them."
@@ -96,7 +96,7 @@
 ## Week 3 — structure and access (Guide §5, §8)
 
 **AI-5.1 · WIDEN — make a vague activity buildable**
-> "Here is my Decisions doc. Module objective: [X]. My three rungs are [I do / we do / you do] = [Y]. Give me three concrete named activities for the 'we do' rung that fit this audience and depth — each with what's provided and what the student supplies, blanking decisions rather than syntax. **Name them; don't write them.**"
+> "Here is my Decisions doc. Module objective: [X]. My ramp is: I do = [the demo], we do = [the paired fill-in], you do = [the independent task]. Give me three concrete named activities for the 'we do' rung that fit this audience and depth — each with what's provided and what the student supplies, blanking decisions rather than syntax. **Name them; don't write them.**"
 
 **AI-5.3 · SIMULATE — find the missing rung**
 > "Here's my complete version and my practice version. You're a student who has only seen the complete one. Attempt the practice. Where do you not know what to do?"
@@ -127,7 +127,7 @@
 
 ## Week 4 — produce (Guide §6)
 
-This is PRODUCE's week, and the Guide walks the loop step by step — set the persona, build the complete version, degrade it into practice, bound the answer space, verify every line. **Use §6a, not this card.** The two councils and the comprehensiveness check are in §6b and §6c. **With an agent, §6e has the same loop as six prompts, AI-6.1 to AI-6.6** — build-degrade-verify (6.1), bounding (6.2), the Design and Review Councils (6.3, 6.4), the deck (6.5), the comprehensiveness check (6.6) — and the one rule that matters most there: *the agent's report is not your verification.* Keep the log (`AI_Direction_Log_TEMPLATE`) either way.
+This is PRODUCE's week, and the Guide walks the loop step by step — set the persona, build the complete version, degrade it into practice, bound the answer space, verify every line. **Use §6a, not this card.** The two councils and the comprehensiveness check are in §6b and §6c. **With an agent, §6e has the same loop as seven prompts, AI-6.1 to AI-6.7** — build-degrade-verify (6.1), bounding (6.2), the Design and Review Councils (6.3, 6.4), the deck (6.5), the comprehensiveness check (6.6), the whole-course drift check (6.7) — and the one rule that matters most there: *the agent's report is not your verification.* Keep the log (`AI_Direction_Log_TEMPLATE`) either way.
 
 ---
 
@@ -142,7 +142,7 @@ This is PRODUCE's week, and the Guide walks the loop step by step — set the pe
 > "Here are my notes from the run. Turn them into specific changes, each naming the MDD row or module file it lands in. **Don't propose anything my notes don't support.**"
 
 **AI-9.2 · TRANSLATE · RUN — the same, as a diff against your folder**
-> "Read `retro/run_<date>.md` and the whole course folder. Turn each note into a specific change that names the MDD row or module file it lands in. Propose nothing the notes do not support. Write the proposals to `retro/proposed_changes.md` as a diff I can accept or reject line by line. **Apply nothing.**"
+> "Read my retro notes — `retro/run_<date>`, in a `retro/` folder beside the modules — and the whole course folder. Turn each note into a specific change that names the MDD row or module file it lands in. Propose nothing the notes do not support. Write the proposals to `retro/proposed_changes.md` as a diff I can accept or reject line by line. **Apply nothing.**"
 
 ---
 
