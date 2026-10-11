@@ -305,7 +305,7 @@ And they're **generative, not a grade.** You don't pass or fail — you *answer*
 >
 > **Verify:** each candidate names the objective it serves; anything that doesn't fit your Decisions doc is out before you weigh it. Input, not instruction — a feature you reject is still a decision made on purpose.
 
-**What you do with them — a checklist, not the build.** You're not making anything yet; you're taking inventory of what the course will need. For each practice, answer its anchor question with a *concrete feature*, not a note — "Activate Prior Learning" isn't "remind them of the basics," it's the specific opening hook you'll build. Can't answer one? **That gap is a design task**: something you now know you have to make, and will build later (§6). Run the audit at the **course level** now — you don't have modules yet; those come next (§3.5) — and each module you build later applies the relevant practices again at its own scale (its own hook, its own practice). One row per practice; the features you list flow into the MDD's *Activities* and *Materials* columns (§4), get sorted into modules there, and get built in §6.
+**What you do with them — a checklist, not the build.** You're not making anything yet; you're taking inventory of what the course will need. For each practice, answer its anchor question with a *concrete feature*, not a reminder to yourself — "Activate Prior Learning" isn't "remind them of the basics," it's the specific opening hook you'll build. Can't answer one? **That gap is a design task**: something you now know you have to make, and will build later (§6). Run the audit at the **course level** now — you don't have modules yet; those come next (§3.5) — and each module you build later applies the relevant practices again at its own scale (its own hook, its own practice). One row per practice; the features you list flow into the MDD's *Activities* and *Materials* columns (§4), get sorted into modules there, and get built in §6.
 
 | Practice — what it's for | Anchor question | The answer becomes… |
 |---|---|---|
@@ -332,19 +332,19 @@ And the audit earns its keep: the coffee author had **no good answer for *Develo
 
 **Turning an answer into a built feature.** The audit hands you a to-do list, and **each has its own craft note in Appendix D** — how to build a good one, not just where it lands: **Activate** → *Analogy Craft*, **Organize Knowledge** → *Structure Craft*, **Motivate** → *Motivation Craft*, **Develop Mastery** → *Mastery Craft*, **Practice & Feedback** → *Practice Craft*, **Climate** → *Climate Craft*, **Self-Directed** → *Self-Direction Craft*. Whichever feature it is, it then lands as a **row in your MDD**: a thing students *do* goes in the *Activities* column, a thing you *give* them goes in *Materials & Media* (§4) — named concretely and assigned to the module it serves. *(The coffee audit’s "open with a disappointing cup" becomes Module 1’s opening **Activity**; its "reference brew to taste" becomes a **Material**.)* The chain: **the audit surfaces the feature → the MDD *places* it (a module and a slot, named) → you build it (§6, using the craft in Appendix D) → the Review Council (§6b) checks it.**
 
-## A worked example — one practice, from question to note
+## A worked example — one practice, from question to feature
 
 Take **Organize Knowledge** on the coffee course and trace it the whole way:
 
 - **The anchor question:** *how do the key concepts relate and build on each other — can you draw a map?*
 - **The gap you find:** right now the course is a pile of separate topics — grind, water temperature, ratio, time, beans. Five things to memorize, with nothing tying them together.
-- **The feature you note:** *one concept map for the whole course, spined on "extraction"* — every variable shown as a labeled lever on that one idea (grind finer → faster extraction → bitter if you overshoot; cooler water → slower extraction → sour if you undershoot). A single diagram you show in session one and keep returning to.
+- **The feature you write down:** *one concept map for the whole course, spined on "extraction"* — every variable shown as a labeled lever on that one idea (grind finer → faster extraction → bitter if you overshoot; cooler water → slower extraction → sour if you undershoot). A single diagram you show in session one and keep returning to.
 
 Three things that one example makes concrete:
 
 - **Why it's course-level, not module-level.** It's a map of the *entire* subject — it organizes how the whole course hangs together. A single module might zoom into one lever (a module just on grind), but the map spans the course. The tell: *if the feature is about the whole thing hanging together, it's course-level.*
 - **It's a feature, not an objective.** Your objective is still *"brew a repeatable pour-over."* The map isn't a goal a student *achieves* — it's a *part of the course* (a Material) that helps them reach the goal. A different kind of thing entirely.
-- **Right now it's only a note.** You haven't built anything — you've written down "the course needs an extraction map." Later that note gets **placed** (it lands in your MDD as a Material — referenced at the course intro and the top of each module: "here's where you are on the map") and **built** in production (you sketch it, or have AI draft a few and you pick the spine — see *Structure Craft*, Appendix D).
+- **Right now it's only written down.** You haven't built anything — the audit says "the course needs an extraction map," and that is all. Later that plan gets **placed** (it lands in your MDD as a Material — referenced at the course intro and the top of each module: "here's where you are on the map") and **built** in production (you sketch it, or have AI draft a few and you pick the spine — see *Structure Craft*, Appendix D).
 
 Now you have the raw material — objectives, the practices that make a course *land*, and the craft to build them (Appendix D). Next, decompose it into modules by working backward from the end.
 

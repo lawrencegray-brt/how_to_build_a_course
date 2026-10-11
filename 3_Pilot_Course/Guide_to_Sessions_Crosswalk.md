@@ -9,7 +9,7 @@
 | Session | Guide sections it teaches |
 | --- | --- |
 | **1 — Decide & Write Objectives** | §0 The Big Picture · §1 Start With Decisions · §2 Write Learning Objectives · **Appendix A** (Bloom's Taxonomy) · §7 Set Depth *(as objective altitude)* |
-| **2 — Master Design Document** | §3 Pressure-Test With the Seven Practices *(the **note → feature** move + §3's extraction-map worked example; **Appendix B** question bank)* · §3.5 Decompose Into Modules / Backward Design *(the 7-step procedure on the **Decompose worksheet**, incl. surfacing each module's features via the seven practices)* · §7 Set Depth *(as scope + time)* · §4 Build the MDD *(+ Coherence check #1)* · §6b the **Design** Council · **Appendix D** introduced *(craft notes — the how-to-build reference for each feature)* |
+| **2 — Master Design Document** | §3 Pressure-Test With the Seven Practices *(the **reminder → feature** move + §3's extraction-map worked example; **Appendix B** question bank)* · §3.5 Decompose Into Modules / Backward Design *(the 7-step procedure on the **Decompose worksheet**, incl. surfacing each module's features via the seven practices)* · §7 Set Depth *(as scope + time)* · §4 Build the MDD *(+ Coherence check #1)* · §6b the **Design** Council · **Appendix D** introduced *(craft notes — the how-to-build reference for each feature)* |
 | **3 — Structure the Module** | §5 Structure the Module / Three Packages *(lay the packages out — the features are already in your MDD; you produce them in §6)* · §8 Design for All Learners (UDL / accessibility) · §7 Set Depth *(trimming oversized modules)* |
 | **4 — Produce With GenAI** | §6 Produce With GenAI Under Guardrails · §6b the **Review** Council · §6c The Comprehensiveness Check · §6d Pick the Tool That Fits the Artifact · **Appendix D** applied *(the craft when you actually build each feature)* |
 | **5 — Teach-Back & Feedback** | §5's "anyone can teach this" *(portability, tested live)* · **Teaching It Well** *(the craft)* · §9 Evaluate & Improve · §9's syllabus note *(assembled last)* · §6b the whole-course Review Council |
@@ -30,7 +30,7 @@
 | §0 The Big Picture | Session 1 (1.1) |
 | §1 Start With Decisions | Session 1 (1.3) |
 | §2 Write Learning Objectives | Session 1 (1.4–1.5) |
-| §3 Pressure-Test With the Seven Practices *(incl. the **note → feature** move + worked example)* | Session 2 (2.3) |
+| §3 Pressure-Test With the Seven Practices *(incl. the **reminder → feature** move + worked example)* | Session 2 (2.3) |
 | §3.5 Decompose Into Modules — Backward Design, the 7-step procedure, **surface features** (seven practices per module), the **Decompose worksheet** | Session 2 (2.4) |
 | §4 Build the Master Design Document | Session 2 (2.5); Coherence check #1 assigned in 2.6 |
 | §5 Structure the Module (Three Packages) — *structure* the packages; produce them in §6 | Session 3 (3.3–3.4) |
@@ -57,7 +57,7 @@
 
 2. **§7 Depth is taught three times, by design.** It shows up as *objective altitude* in Session 1 ("aim at the highest level the content honestly supports"), as *scope + time* in Session 2 ("depth drives time; time fits your container"), and as *trimming* in Session 3 ("one coherent capability per module"). Depth isn't a one-time decision — it's the recurring discipline that keeps scope honest.
 
-3. **The seven practices recur across the whole build — they don't finish in Session 2.** Like depth (above), they're a recurring discipline, not a single step. You first meet them as a *move* in §3 (a **note → feature**, taught live with the extraction-map worked example, Session 2.3), but they come back at every scale:
+3. **The seven practices recur across the whole build — they don't finish in Session 2.** Like depth (above), they're a recurring discipline, not a single step. You first meet them as a *move* in §3 (a **reminder → feature**, taught live with the extraction-map worked example, Session 2.3), but they come back at every scale:
    - **Course level — the audit (§3, Session 2.3):** run once against your objectives + Decisions, surfacing course-wide features.
    - **Per module — surface features (§3.5, Session 2.4):** run them again over *each module's* objectives on the **Decompose worksheet**, naming that module's features *before* the fit-check sizes them.
    - **Placed (§4, Session 2.5):** each feature lands in a module row of the MDD.
