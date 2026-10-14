@@ -3,7 +3,7 @@
 *~30 minutes.*
 
 ## Do this before Session 3
-1. **Finish your Master Design Document** (Deliverable B).
+1. **Decompose your course on the worksheet, then build your Master Design Document from it** (Deliverable B). All seven steps first, for every course objective — as you saw it filled for coffee; then bring the module list across into the MDD, add topics and materials, name the activities, and check it against **Rubric 5.2** before you call it done.
 2. **Choose the ONE module you'll build.** Just one — not the whole course.
 3. **Have your Decisions doc in hand.**
 4. **Read the guide, Section 5 (the three packages)** — including the accessibility (UDL) part.

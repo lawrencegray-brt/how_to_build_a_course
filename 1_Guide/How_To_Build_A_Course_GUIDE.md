@@ -934,6 +934,10 @@ The standard frame is **Universal Design for Learning (UDL)** — offer more tha
 - **Engagement** — give more than one reason and way to stay in it. Make relevance explicit; offer choices where you can; chunk into manageable pieces; keep structure predictable.
 - **Action & Expression** — let people show what they know in more than one way. A teach-back *or* a written artifact; flexible deadlines where feasible; scaffolding so the path is climbable.
 
+**One concrete fix, so "don't rely on color alone" is not abstract.** The figure is the same residual plot twice — the smallest version of the Representation principle.
+
+![The same data, twice. Before: red dots and blue dots, no axis labels — color is the only signal, so the plot is invisible to a color-blind reader and meaningless the moment the legend is gone. After: axis labels, a one-line caption ("points above the line mean the model under-predicted"), and the two groups told apart by shape — circles and crosses — not by color alone. One is a wall; the other is a door.](visuals/udl_before_after.png){width=100%}
+
 **UDL in one course.** For the home-coffee course: the pour taught three ways — a captioned video, a written recipe card, and a simple diagram (Representation); relevance made explicit, "café coffee for pennies" (Engagement); mastery shown by an on-camera brew *or* a brew-log (Action & Expression). The same three modes hold for an ML module — a runnable notebook, a written walkthrough, and a diagram; a dataset they care about; a teach-back or a submitted notebook.
 
 
