@@ -23,9 +23,10 @@ so you can also just navigate to it.
 - [`Seven_Practices_Audit_TEMPLATE.docx`](templates/Seven_Practices_Audit_TEMPLATE.docx) — Week 2 (Guide §3).
 - [`Decompose_TEMPLATE.docx`](templates/Decompose_TEMPLATE.docx) — Week 2 (Guide §3.5).
 - [`MDD_TEMPLATE.docx`](templates/MDD_TEMPLATE.docx) — Week 2 (Guide §4).
-- [`Module_Build_TEMPLATE.docx`](templates/Module_Build_TEMPLATE.docx) — Week 3 onward.
+- [`Module_Skeleton_Map_TEMPLATE.docx`](templates/Module_Skeleton_Map_TEMPLATE.docx) — Week 3 (Guide §5): one page per module — your MDD row, the file map, the ramp, the agenda sketch.
+- [`Module_Build_TEMPLATE.docx`](templates/Module_Build_TEMPLATE.docx) — Week 4, optional: a module's page — introduction, materials, assignment, conclusion.
 - [`Teaching_Guide_Segment_TEMPLATE.docx`](templates/Teaching_Guide_Segment_TEMPLATE.docx) — Week 5, for your teach-back segment.
-- [`Module_Skeleton_TEMPLATE/`](../../1_Guide/Module_Skeleton_TEMPLATE/) — Week 3; copy it once per module and rename the files to your subject. *(in `1_Guide/`)*
+- [`Module_Skeleton_TEMPLATE/`](../../1_Guide/Module_Skeleton_TEMPLATE/) — Week 3; copy it once per module and rename the files to your subject. *(in `1_Guide/`; also shipped as `Module_Skeleton_TEMPLATE.zip` beside the participant bundles, with `Coffee_Module1_filled.zip`, the same skeleton filled)*
 - [`Contact_Hour_Companion.pdf`](../../1_Guide/Contact_Hour_Companion.pdf) — size each module to its time (Guide §3.5). *(in `1_Guide/`)*
 
 **Student materials (use these during the course)**

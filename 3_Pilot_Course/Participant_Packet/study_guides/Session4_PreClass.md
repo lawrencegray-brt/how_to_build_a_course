@@ -3,7 +3,7 @@
 *~30 minutes.*
 
 ## Do this before Session 4
-1. **Flesh out your module skeleton** — the file structure and student-facing shape, with the scaffolding level decided for each piece and access built in.
+1. **Finish your module folder and your Module Skeleton Map** — every file renamed to your form or deleted; the map's parts C and D done: the rung for each student piece, and the agenda sketch with first estimates. If it runs past your container, fix it on the map now.
 2. **Have your Decisions doc in hand — and your course folder** — you'll feed them to GenAI in class.
 3. **Read the guide, Section 6 (Produce With GenAI)** — including **6e, the loop with an agent (AI-6.1 to AI-6.6)** — and skim **Section 6b (the Review Council)**.
 
