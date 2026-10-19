@@ -662,7 +662,7 @@ That's enough for you to teach from, months later, and it takes minutes to write
 >
 > **Verify:** every place it stalls is a missing hint or a rung you skipped.
 
-**Start from the blank template:** copy `Module_Skeleton_TEMPLATE/` for each module. Its file names are **generic on purpose** — they don't assume what *kind* of course you're building (code, hands-on, writing…), so the one skeleton fits any of them. **Rename each to your course's form** — `complete_solution` becomes `week1_demo.ipynb` for code, or a `recipe_card` for coffee; every stub carries a "code → … · non-code → …" hint. Two filled examples to copy from:
+**Start from the blank template:** copy `Module_Skeleton_TEMPLATE/` for each module. Its file names are **generic on purpose** — they don't assume what *kind* of course you're building (code, hands-on, writing…), so the one skeleton fits any of them. **Rename each to your course's form** — `complete_solution` becomes `week1_demo.ipynb` for code, or a `recipe_card` for coffee; every stub carries a one-line note per medium — code, hands-on, writing — so you can see what it becomes in yours. Two filled examples to copy from:
 
 - code — `2_Worked_Examples/IntroML/Week1_folder_skeleton/`
 - non-code — `2_Worked_Examples/Coffee/Module1_folder_skeleton/`
