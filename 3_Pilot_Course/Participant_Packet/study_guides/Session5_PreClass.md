@@ -9,5 +9,5 @@
 4. **Bring your module folder as it stands, and your questions about the build.**
 
 ## Come ready to
-- Learn what you do after you teach a course for real — the four levels, the retro, the two AI jobs around it — and write your evaluate-and-improve plan (one of the rubric's must-rows).
+- Learn what you do after you teach a course for real — the four levels, the retro, the two AI jobs around it — and write your evaluate-and-improve plan (one of the rubric rows you tick for yourself).
 - Hear the eight habits of *Teaching It Well* and pick two to try in your recording.
