@@ -25,7 +25,7 @@
 
 ## Rubric 5.3 — One Complete Module, Built and Taught (Deliverable C)
 
-Judged in **two parts** — an **artifact review** of your module folder, plus the **live teach-back** in Week 5.
+Judged in **two parts** — an **artifact review** of your module folder, plus the **teach-back** in Week 5. The artifact rows are a **self-check**: you tick them and send the folder; the instructor confirms at a glance that the things are present and spends the review time on the teach-back.
 
 **Artifact review — from your module folder:**
 

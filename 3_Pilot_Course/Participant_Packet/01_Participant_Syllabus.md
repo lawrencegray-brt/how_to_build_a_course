@@ -56,7 +56,7 @@ This pilot is assessed on a **completed / not-completed basis — there are no l
 - **Pre-work** — short reading/preparation before each session so live time is spent producing, not lecturing. Includes coming to Session 1 with the subject you want to build a course on.
 - **Live sessions** — five required 2-hour Zoom meetings of instruction, guided building, and feedback. Attendance expected.
 - **Between-session production** — the real work: drafting your objectives, MDD, and module. In Week 4 you also run a **Review Council** review of your module and revise, keeping a short AI-direction + verification log.
-- **Teach-back** — you record a 10-minute segment of your module, taught from your own teaching guide, watch it back once and write a half-page retro, and submit both with your module folder. Feedback is from the instructor, on Rubric 5.3 — met / not yet, no scores. Peer feedback is optional and was not used in the first cohort.
+- **Teach-back** — you record a 10-minute segment of your module, taught from your own teaching guide, watch it back once before you send it, and submit it with your module folder and Rubric 5.3's folder rows ticked by you. The instructor reviews the recording (the teach-back half of 5.3 — met / not yet, no scores) and confirms the folder at a glance. Peer feedback is optional and was not used in the first cohort.
 
 ## WEEKLY SCHEDULE
 
