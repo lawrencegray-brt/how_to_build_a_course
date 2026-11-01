@@ -12,7 +12,7 @@
 | **2 — Master Design Document** | §3 Pressure-Test With the Seven Practices *(the **reminder → feature** move + §3's extraction-map worked example; **Appendix B** question bank)* · §3.5 Decompose Into Modules / Backward Design *(the 7-step procedure on the **Decompose worksheet**, incl. surfacing each module's features via the seven practices)* · §7 Set Depth *(as scope + time)* · §4 Build the MDD *(+ Coherence check #1)* · §6b the **Design** Council · **Appendix D** introduced *(craft notes — the how-to-build reference for each feature)* |
 | **3 — Structure the Module** | §5 Structure the Module / Three Packages *(lay the packages out — the features are already in your MDD; you produce them in §6)* · §8 Design for All Learners (UDL / accessibility) · §7 Set Depth *(trimming oversized modules)* |
 | **4 — Produce With GenAI** | §6 Produce With GenAI Under Guardrails · §6b the **Review** Council · §6c The Comprehensiveness Check · §6d Pick the Tool That Fits the Artifact · **Appendix D** applied *(the craft when you actually build each feature)* |
-| **5 — Teach-Back & Feedback** | §5's "anyone can teach this" *(portability, tested live)* · **Teaching It Well** *(the craft)* · §9 Evaluate & Improve · §9's syllabus note *(assembled last)* · §6b the whole-course Review Council |
+| **5 — Teach-Back & Feedback** | §5's "anyone can teach this" *(portability, tested on a recorded teach-back)* · **Teaching It Well** *(the craft)* · §9 Evaluate & Improve · §9's syllabus note *(assembled last)* · §6b the whole-course Review Council |
 
 **Spans every session (not tied to one):**
 
@@ -34,16 +34,16 @@
 | §3.5 Decompose Into Modules — Backward Design, the 7-step procedure, **surface features** (seven practices per module), the **Decompose worksheet** | Session 2 (2.4) |
 | §4 Build the Master Design Document | Session 2 (2.5); Coherence check #1 assigned in 2.6 |
 | §5 Structure the Module (Three Packages) — *structure* the packages; produce them in §6 | Session 3 (3.3–3.4) |
-| §6 Produce With GenAI (Under Guardrails) | Session 4 (4.2 loop · 4.3 guardrails · 4.4 planted error) |
-| §6b The Two AI Councils | **Design** Council → Session 2 (2.4); **Review** Council → Session 4 (4.5) + whole-course in Session 5 (5.4) |
-| §6c The Comprehensiveness Check | Session 4 (4.5) |
-| §6d Pick the Tool That Fits the Artifact | Session 4 (4.2, background) |
+| §6 Produce With GenAI (Under Guardrails) | Session 4 (4.2 the loop · 4.3 when the AI doesn't know your subject · 4.4 the loop shown · 4.5 the loop with an agent) |
+| §6b The Two AI Councils | **Design** Council → Session 2 (2.4); **Review** Council → Session 4 (4.5 as sub-agents; 4.6 named) + whole-course in Session 5 (5.5) |
+| §6c The Comprehensiveness Check | Guide §6c; pointed at from Session 4 (4.6) |
+| §6d Pick the Tool That Fits the Artifact | Session 4 (4.5 — agent mode is the tool that executes) |
 | §7 Set Depth: How Far Down Do You Go? | Session 1 (altitude) · Session 2 (scope + time) · Session 3 (trim) |
 | §8 Design for All Learners (Accessibility) | Session 3 (3.3, UDL) |
 | §9 Evaluate & Improve | Session 5 (5.3) |
 | §9 — Front it for students: the syllabus | Session 5 (assembled last); introduced Session 1 |
 | §10 Templates & Checklists | Every session (one template each) |
-| Teaching It Well — The Craft That Carries It | Session 5 (5.1–5.2); applied throughout |
+| Teaching It Well — The Craft That Carries It | Session 5 (5.4, as choices for the recording); applied throughout |
 | Appendix A — Bloom's Taxonomy | Session 1 (1.4) |
 | Appendix B — The Seven Practices: Full Question Bank | Session 2 (2.3) |
 | Appendix C — Frameworks This Guide Stands On | Background reference (all sessions) |

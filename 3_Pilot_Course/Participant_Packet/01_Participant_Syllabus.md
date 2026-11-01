@@ -1,8 +1,8 @@
 # The Course Master Method — Pilot Syllabus
 
-**Dates:** October 5th to November 2
+**Dates:** October 5 to November 23, 2026 — five sessions, then two weeks to build and record, then feedback
 **Instructor:** Dr. Lawrence Gray
-**Class Meetings:** Monday at 11 AM MDT, 2 hours on Google Meet (5 weekly sessions)
+**Class Meetings:** five live sessions on Google Meet at 11 AM MT — Mondays October 5 and 12, Tuesdays October 20, 27 and November 3 (the last two run about an hour). **The module build and the recorded teach-back are due together on Tuesday, November 17**; instructor feedback follows the week of November 23.
 **Location:** Course materials on GitHub — <https://github.com/lawrencegray-brt/how_to_build_a_course>\
 (no account needed; click the green **Code** button, then **Download ZIP**)
 **Office Hours:** By appointment
@@ -49,14 +49,14 @@ This pilot is assessed on a **completed / not-completed basis — there are no l
 
 - **A — Learning Objectives** (Weeks 1–2): course objectives first (Week 1), then the module objectives that ladder up to them, written once you decompose into modules (Week 2).
 - **B — Master Design Document** (Week 2): every module mapped — objectives, topics, materials, activities, values.
-- **C — One complete module, built and taught** (Weeks 3–5): structured (Wk 3), produced with GenAI (Wk 4), delivered as a 10-minute teach-back (Wk 5).
+- **C — One complete module, built and taught** (Weeks 3–5): structured (Wk 3), produced with GenAI (Wk 4), and taught as a **10-minute recorded teach-back** of one segment, submitted with the module folder two weeks after Session 5 and returned with instructor feedback on the module rubric. The minimum that counts is one segment, complete.
 
 ## ASSIGNMENTS
 
 - **Pre-work** — short reading/preparation before each session so live time is spent producing, not lecturing. Includes coming to Session 1 with the subject you want to build a course on.
 - **Live sessions** — five required 2-hour Zoom meetings of instruction, guided building, and feedback. Attendance expected.
 - **Between-session production** — the real work: drafting your objectives, MDD, and module. In Week 4 you also run a **Review Council** review of your module and revise, keeping a short AI-direction + verification log.
-- **Teach-back** — in Week 5 you deliver a 10-minute segment of your module to the group for live feedback.
+- **Teach-back** — you record a 10-minute segment of your module, taught from your own teaching guide, watch it back once and write a half-page retro, and submit both with your module folder. Feedback is from the instructor, on Rubric 5.3 — met / not yet, no scores. Peer feedback is optional and was not used in the first cohort.
 
 ## WEEKLY SCHEDULE
 
@@ -65,5 +65,5 @@ This pilot is assessed on a **completed / not-completed basis — there are no l
 | **1 — Decide & Write Objectives** | Skim the guide; **bring your subject** | Decisions before production; Bloom objectives; fix-the-weak-objective pair work | **Deliverable A (part 1)** — finish Decisions doc + course objectives |
 | **2 — Master Design Document** | Read the seven practices; audit your objectives | Feedback on objectives; build your MDD | **Deliverable B** — write module objectives as you decompose, finish the MDD, choose your one module |
 | **3 — Structure the Module** | MDD final; module chosen | Three-package structure; scaffolding; accessibility (UDL); sketch your module skeleton | Flesh out the skeleton — structure, not content yet |
-| **4 — Produce With GenAI** | Skeleton fleshed out | GenAI production loop + guardrails; planted-error exercise; Review Council | Build the module to the floor; **run a Review Council review and revise**; keep a verification log |
-| **5 — Teach-Back & Feedback** | Module built; segment ready | 10-minute teach-backs; structured group + instructor feedback; evaluate & improve | **Deliverable C** — complete module, built and taught |
+| **4 — Produce With GenAI** | Skeleton laid out; Skeleton Map | The production loop — complete first, everything derived; when the AI doesn't know your subject; the loop with an agent (the folder as context, modes, permissions, sub-agents, skill files); the four checks, by name | Build the module to the floor (one segment at minimum); keep the AI-direction + verification log; run the Review Council and the accessibility pass if you get there |
+| **5 — Evaluate & Improve, and the Recorded Teach-Back** | Keep building; read §9 and *Teaching It Well* | How the course ends; Rubric 5.3 as what the instructor looks for; evaluate & improve with your recording as the first run; Teaching It Well; the close | **Deliverable C** — the module (floor) and a 10-minute recorded teach-back, due together two weeks later; feedback the week after |

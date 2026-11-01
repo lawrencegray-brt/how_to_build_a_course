@@ -41,9 +41,9 @@ Judged in **two parts** — an **artifact review** of your module folder, plus t
 | Self-assessment | Includes a way for students to gauge their own understanding. |
 | Answer space bounded *(if open-ended)* | For divergent assessments, the range of valid answers was charted ahead (by bounding the answer space, §6a step 5b) — used to *widen* the feedback envelope, not define it. |
 
-**Live teach-back — Week 5:**
+**Teach-back — live, or recorded with instructor feedback:**
 
 | Criterion | Meets standard |
 | --- | --- |
-| **Portable (the key test)** *(must)* | A different instructor could teach it from the guide alone — demonstrated by the teach-back. |
+| **Portable (the key test)** *(must)* | A different instructor could teach it from the guide alone — demonstrated by the teach-back, watched with the guide open; each head-not-page moment is a line to add. |
 | Teach-back delivery *(must)* | The 10-minute segment was clear, on-time, followed your own teaching guide, and applied the Teaching It Well principles. |
