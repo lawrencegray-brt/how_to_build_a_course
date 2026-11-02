@@ -4,7 +4,7 @@
 
 ## 1. Build first
 
-Build your one module to the **minimum-viable floor** with the production loop: a verified complete version · one practice derived from it · a pre-class study guide · one teaching-guide segment · a self-check. **If that is more than the time allows, the minimum that counts is one segment, complete** — its script in your teaching guide, and the complete version it narrates. Keep the AI-direction + verification log as you go (the template is in your fill-in file).
+Build your one module to the **minimum-viable floor** with the production loop — five pieces, each a file in the folder you laid out: the **complete version, verified** (the full worked example you teach from, run or done so you know it works) · **one practice derived from it** (the same thing with the decisions taken out) · **a pre-class study guide** (the reading and warm-up that get students in primed) · **one segment of your teaching guide** (the script for one piece of the live session) · **a self-check** (the short quiz students use on themselves, never a grade). **If that is more than the time allows, the minimum that counts is one segment, complete** — its script in your teaching guide, and the complete version it narrates. Keep the AI-direction + verification log as you go (the template is in your fill-in file).
 
 ## 2. Before you record
 
