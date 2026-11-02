@@ -3,8 +3,7 @@
 **Dates:** October 5 to November 23, 2026 — five sessions, then two weeks to build and record, then feedback
 **Instructor:** Dr. Lawrence Gray
 **Class Meetings:** five live sessions on Google Meet at 11 AM MT — Mondays October 5 and 12, Tuesdays October 20, 27 and November 3 (the last two run about an hour). **The module build and the recorded teach-back are due together on Tuesday, November 17**; instructor feedback follows the week of November 23.
-**Location:** Course materials on GitHub — <https://github.com/lawrencegray-brt/how_to_build_a_course>\
-(no account needed; click the green **Code** button, then **Download ZIP**)
+**Materials:** you need five files for this course, and they are sent to you before Session 1 — the **Guide** (`How_To_Build_A_Course_GUIDE.pdf`, the textbook; everything said in class is in it), **`Course_Master_IN_CLASS.pdf`** (everything you read, in class order), **`Course_Master_FILL_IN.docx`** (everything you fill in, in class order), and two zips of examples (`Coffee_Module1_filled.zip`, `Module_Skeleton_TEMPLATE.zip`). When a file is updated you will be told to re-download it. Fallback copy of everything: <https://github.com/lawrencegray-brt/how_to_build_a_course> (no account needed).
 **Office Hours:** By appointment
 
 ---
