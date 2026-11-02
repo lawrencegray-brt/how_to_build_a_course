@@ -1002,6 +1002,12 @@ You don't need a formal study. **Lightweight is enough:**
 >
 > **RUN:** the agent turns the notes into a reviewable set of changes *against the course files*, each landing in a named MDD row or module file, for the MDD owner to accept or reject line by line — which is exactly the governance model below. *Agent prompt:* **"Read my retro notes — `retro/run_<date>`, in a `retro/` folder beside the modules; create it if it isn't there — and the whole course folder. Turn each note into a specific change that names the MDD row or module file it lands in. Propose nothing the notes do not support. Write the proposals to `retro/proposed_changes.md` as a diff I can accept or reject line by line. Apply nothing."**
 
+> **AI can help here — AI-9.5 · TRANSLATE.** If the run was recorded, the transcript is the run itself — not your memory of it. Diff it against the guide you taught from.
+>
+> *"Here is the transcript of my run and the segment of my teaching guide I taught from. List every explanation, example or instruction I spoke that is not in the guide, with its timestamp. Then list every line of the guide I skipped. Add nothing from your own knowledge; quote me."*
+>
+> **Verify:** a diff, not a judgment — every item points at a timestamp or a guide line. Each gap on the first list is a line to add to the guide, by your hand; the second list feeds the retro's first question. Most recorders (Zoom, Teams, Copilot) produce the transcript for free; a phone recording can be transcribed by the same tools.
+
 **Improve additively** (the depth rule's principle): refine *up* where questions went deeper than expected; don't gut what worked.
 - **Land the changes in the MDD and teaching guide** so the next run starts better than this one did.
 - **Update the feedback envelope** (§6a, 5b) with what students actually submitted. The AI's predicted range was a stand-in; real work is the correction. This is the step that turns one run's surprises into next run's prepared feedback. **AI-9.4 · RUN:** *"Read `envelope` and the real submissions (put them in `retro/submissions/`). Sort each submission against my axes. Report every band the predicted envelope missed and every predicted band no student produced. Propose a revised envelope as `envelope_v2.md`. Do not change the feedback bank."*

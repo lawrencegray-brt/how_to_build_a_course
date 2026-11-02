@@ -25,6 +25,8 @@ With your guide open beside the video, before you send it:
 2. **Mark every moment you said something that is in your head and not on the page.** That gap is where a course dies when you leave the room; **add each one to your guide now**, before you send it.
 3. **Note what you would change**, and where it lands — which MDD row or module file. Nothing is written up for the instructor; the recording and the guide you send are the result.
 
+4. **If your recorder produced a transcript** (Zoom, Teams and Copilot do), run **AI-9.5** from the Guide's section 9 with the transcript and the guide segment you taught from: *"Here is the transcript of my run and the segment of my teaching guide I taught from. List every explanation, example or instruction I spoke that is not in the guide, with its timestamp. Then list every line of the guide I skipped. Add nothing from your own knowledge; quote me."* What comes back is your head-not-page list with timestamps. Add each line to your guide yourself; the AI does not edit the guide.
+
 Then, if you like, **AI-9.2**: *"Here are my notes from the run. Turn them into specific changes, each naming the MDD row or module file it lands in. Don't propose anything my notes don't support."*
 
 ## 5. Send, by the date given in class
